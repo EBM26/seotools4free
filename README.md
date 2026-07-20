@@ -27,7 +27,15 @@ indexable/SEO-friendly.
 ## Tool list
 
 **Ship first (static, no backend):**
-1. Google SERP Simulator
+1. Google SERP Simulator — done, see `serp-simulator.html`. Full-width page
+   layout (`.tool-main--wide`, overrides the site's normal 1080px cap).
+   Features: pixel-width title/description limits (canvas `measureText`
+   against Arial, 600px title / 960px desktop & 680px mobile description),
+   desktop/mobile toggle, bold-keyword highlighting, capitalize title,
+   reset, copy-HTML, shareable link (state encoded in URL query string,
+   read back on page load), save-as-image (via html2canvas CDN — this is
+   the one tool on the site that needs an internet connection to load a
+   library; everything else is fully self-contained).
 2. Word Counter — done, see `word-counter.html`
 3. Campaign URL Builder / UTM Builder
 4. Meta Tag Generator

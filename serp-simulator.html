@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google SERP Simulator — Preview Your Title & Meta Description</title>
-  <meta name="description" content="See how your page will look in Google search results before you publish. Free SERP snippet preview with character limit warnings." />
+  <meta name="description" content="See how your page will look in Google search results before you publish. Free SERP snippet preview with pixel-width limit warnings, bold keywords, and shareable links." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,49 +14,107 @@
 
   <div id="site-header"></div>
 
-  <main>
+  <main class="tool-main--wide">
     <div class="tool-eyebrow">Tool 01 / SEO</div>
     <h1 class="tool-title">Google SERP Simulator</h1>
-    <p class="tool-description">Enter your title, URL, and meta description to preview how the result will look on a Google search page, with live character limit warnings.</p>
+    <p class="tool-description">Enter your title, URL, and meta description to preview how the result will look on a Google search page, with pixel-width limit warnings.</p>
 
-    <div class="tool-card">
-      <label for="input-title">Page title</label>
-      <input type="text" id="input-title" placeholder="e.g. Word Counter — Free Online Character and Word Count Tool" />
-
-      <div style="margin-top: 18px;">
+    <div class="serp-layout">
+      <div class="tool-card">
         <label for="input-url">Page URL</label>
         <input type="text" id="input-url" placeholder="e.g. https://example.com/word-counter" />
-      </div>
 
-      <div style="margin-top: 18px;">
-        <label for="input-description">Meta description</label>
-        <textarea id="input-description" placeholder="e.g. Count words, characters, and reading time instantly. Free, no signup required."></textarea>
-      </div>
-
-      <div class="tool-output">
-        <div class="stat">
-          <div class="stat__value" id="stat-title-length">0 / 60</div>
-          <div class="stat__label">Title characters</div>
+        <div style="margin-top: 18px;">
+          <label for="input-sitename">Site name</label>
+          <input type="text" id="input-sitename" placeholder="e.g. Example" />
         </div>
-        <div class="stat">
-          <div class="stat__value" id="stat-description-length">0 / 160</div>
-          <div class="stat__label">Description characters</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="tool-card">
-      <label>Preview</label>
-      <div class="serp-preview">
-        <div class="serp-preview__url" id="preview-url">https://example.com/page</div>
-        <div class="serp-preview__title" id="preview-title">Your page title will appear here</div>
-        <div class="serp-preview__description" id="preview-description">Your meta description will appear here, this is what shows below the title in Google results.</div>
+        <div style="margin-top: 18px;">
+          <label for="input-title">Title <span class="serp-charcount" id="stat-title-length">0 chars (0 / 600px)</span></label>
+          <textarea id="input-title" rows="2" placeholder="e.g. Word Counter — Free Online Character and Word Count Tool"></textarea>
+          <div class="serp-warning" id="warning-title">The title is wider than 600px and may not display in full.</div>
+          <button type="button" class="btn btn--secondary btn--small" id="btn-capitalize">Capitalize title</button>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <label for="input-description">Description <span class="serp-charcount" id="stat-description-length">0 chars (0 / 960px)</span></label>
+          <textarea id="input-description" placeholder="e.g. Count words, characters, and reading time instantly. Free, no signup required."></textarea>
+          <div class="serp-warning" id="warning-description">The description may get trimmed at ~960px on desktop and ~680px on mobile.</div>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <label for="input-bold">Bold keywords <span class="serp-charcount">(space or comma separated)</span></label>
+          <input type="text" id="input-bold" placeholder="e.g. free tools" />
+        </div>
+
+        <div class="serp-actions">
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+          <button type="button" class="btn" id="btn-save-image">Save as image</button>
+          <button type="button" class="btn" id="btn-copy-html">Copy HTML</button>
+          <button type="button" class="btn" id="btn-share-link">Share a link</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+
+      <div class="tool-card">
+        <label>Preview</label>
+
+        <div class="serp-toggle">
+          <button type="button" class="serp-toggle__btn is-active" id="toggle-desktop">Desktop</button>
+          <button type="button" class="serp-toggle__btn" id="toggle-mobile">Mobile</button>
+        </div>
+
+        <div class="serp-mock" id="serp-mock">
+          <div class="serp-mock__topbar">
+            <div class="serp-mock__logo">Google</div>
+            <div class="serp-mock__searchbar">Enter a keyword to get real search results</div>
+          </div>
+          <div class="serp-mock__tabs">
+            <span class="is-active">All</span>
+            <span>Images</span>
+            <span>Videos</span>
+            <span>News</span>
+            <span>Maps</span>
+            <span>More</span>
+          </div>
+
+          <div class="serp-mock__results">
+            <div class="serp-preview">
+              <div class="serp-preview__site">
+                <span class="serp-preview__favicon" id="preview-favicon">?</span>
+                <span class="serp-preview__sitename" id="preview-sitename">example.com</span>
+              </div>
+              <div class="serp-preview__url" id="preview-url">https://example.com/page</div>
+              <div class="serp-preview__title" id="preview-title">Your page title will appear here</div>
+              <div class="serp-preview__description" id="preview-description">Your meta description will appear here, this is what shows below the title in Google results.</div>
+            </div>
+
+            <div class="serp-skeleton">
+              <div class="serp-skeleton__icon"></div>
+              <div class="serp-skeleton__lines">
+                <div class="serp-skeleton__line short"></div>
+                <div class="serp-skeleton__line accent"></div>
+                <div class="serp-skeleton__line full"></div>
+              </div>
+            </div>
+
+            <div class="serp-skeleton">
+              <div class="serp-skeleton__icon"></div>
+              <div class="serp-skeleton__lines">
+                <div class="serp-skeleton__line short"></div>
+                <div class="serp-skeleton__line accent"></div>
+                <div class="serp-skeleton__line full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
   <div id="site-footer"></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="js/include.js"></script>
   <script src="js/serp-simulator.js"></script>
 </body>
