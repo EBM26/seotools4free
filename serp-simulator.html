@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google SERP Simulator — Preview Your Title & Meta Description</title>
+  <meta name="description" content="See how your page will look in Google search results before you publish. Free SERP snippet preview with character limit warnings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 01 / SEO</div>
+    <h1 class="tool-title">Google SERP Simulator</h1>
+    <p class="tool-description">Enter your title, URL, and meta description to preview how the result will look on a Google search page, with live character limit warnings.</p>
+
+    <div class="tool-card">
+      <label for="input-title">Page title</label>
+      <input type="text" id="input-title" placeholder="e.g. Word Counter — Free Online Character and Word Count Tool" />
+
+      <div style="margin-top: 18px;">
+        <label for="input-url">Page URL</label>
+        <input type="text" id="input-url" placeholder="e.g. https://example.com/word-counter" />
+      </div>
+
+      <div style="margin-top: 18px;">
+        <label for="input-description">Meta description</label>
+        <textarea id="input-description" placeholder="e.g. Count words, characters, and reading time instantly. Free, no signup required."></textarea>
+      </div>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-title-length">0 / 60</div>
+          <div class="stat__label">Title characters</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-description-length">0 / 160</div>
+          <div class="stat__label">Description characters</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Preview</label>
+      <div class="serp-preview">
+        <div class="serp-preview__url" id="preview-url">https://example.com/page</div>
+        <div class="serp-preview__title" id="preview-title">Your page title will appear here</div>
+        <div class="serp-preview__description" id="preview-description">Your meta description will appear here, this is what shows below the title in Google results.</div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/serp-simulator.js"></script>
+</body>
+</html>

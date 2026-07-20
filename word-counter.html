@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Counter — Free Online Character and Word Count Tool</title>
+  <meta name="description" content="Count words, characters, sentences, and estimated reading time instantly. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 02 / Text</div>
+    <h1 class="tool-title">Word Counter</h1>
+    <p class="tool-description">Paste or type your text below to see word count, character count, and more, updated live.</p>
+
+    <div class="tool-card">
+      <label for="input-text">Your text</label>
+      <textarea id="input-text" placeholder="Start typing or paste your text here..."></textarea>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-words">0</div>
+          <div class="stat__label">Words</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-characters">0</div>
+          <div class="stat__label">Characters</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-characters-no-space">0</div>
+          <div class="stat__label">Characters (no spaces)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-sentences">0</div>
+          <div class="stat__label">Sentences</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-reading-time">0 min</div>
+          <div class="stat__label">Reading time</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/word-counter.js"></script>
+</body>
+</html>
