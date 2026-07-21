@@ -544,6 +544,35 @@ main {
   color: var(--color-text);
 }
 
+.tool-explainer {
+  margin-top: 32px;
+}
+
+.tool-explainer h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 14px;
+}
+
+.tool-explainer h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 18px 0 6px;
+}
+
+.tool-explainer p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.tool-explainer p:last-child {
+  margin-bottom: 0;
+}
+
 .utm-reference {
   width: 100%;
   border-collapse: collapse;

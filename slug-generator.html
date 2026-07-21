@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slug Generator — Free URL Slug Creator</title>
+  <meta name="description" content="Convert any title or text into a clean, URL-safe slug. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 05 / SEO</div>
+    <h1 class="tool-title">Slug Generator</h1>
+    <p class="tool-description">Type or paste any title or text below to generate a clean, URL-safe slug, updated live as you type.</p>
+
+    <div class="tool-card">
+      <label for="input-text">Title or text</label>
+      <input type="text" id="input-text" placeholder="e.g. 10 Best SEO Tools for Small Businesses in 2026!" />
+
+      <div style="margin-top: 20px;">
+        <label for="input-separator">Word separator</label>
+        <select id="input-separator" style="width: 100%; padding: 13px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--color-bg); color: var(--color-text);">
+          <option value="-">Hyphen ( - )</option>
+          <option value="_">Underscore ( _ )</option>
+        </select>
+      </div>
+
+      <div style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="input-lowercase" checked style="width: auto; margin: 0;" />
+        <label for="input-lowercase" style="margin: 0; text-transform: none; font-family: var(--font-body); font-size: 0.9rem; color: var(--color-text);">Force lowercase</label>
+      </div>
+
+      <div class="tool-output">
+        <div class="stat" style="flex: 1 1 100%;">
+          <div class="stat__value" id="output-slug" style="word-break: break-all;">your-title-here</div>
+          <div class="stat__label">Generated slug</div>
+        </div>
+      </div>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy slug</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>A slug is the part of a URL that identifies a specific page in readable words, like the <code>free-seo-tools</code> in <code>example.com/blog/free-seo-tools</code>. Clean slugs are easier to read, share, and tend to perform slightly better in search results than long strings of numbers or default IDs.</p>
+      <h3>What this tool does to your text</h3>
+      <p>It lowercases the text (optional), replaces spaces and punctuation with your chosen separator, strips characters that aren't safe in a URL, and collapses repeated separators down to one.</p>
+      <h3>Good slug habits</h3>
+      <p>Keep slugs short and descriptive, avoid stop words like "the" or "and" where possible, and don't change a slug after a page has already been indexed unless you're also setting up a redirect, since that can break existing links and search rankings.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/slug-generator.js"></script>
+</body>
+</html>

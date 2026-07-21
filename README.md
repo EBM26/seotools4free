@@ -23,6 +23,11 @@ indexable/SEO-friendly.
 - **Layout:** desktop max content width is `1080px` (single CSS variable
   `--max-width` in `css/style.css`, controls header/main/footer).
 - **Header:** solid accent-colored background, white logo/nav text.
+- **Explainer sections:** every tool page ends with an "About this tool" /
+  reference card (`.tool-explainer`, or `.utm-reference` table for
+  parameter-style content) — short, originally-worded context on what the
+  tool measures and why, not copied from any reference site. Keep this
+  pattern going for every new tool.
 
 ## Tool list
 
@@ -35,16 +40,26 @@ indexable/SEO-friendly.
    reset, copy-HTML, shareable link (state encoded in URL query string,
    read back on page load), save-as-image (via html2canvas CDN — this is
    the one tool on the site that needs an internet connection to load a
-   library; everything else is fully self-contained).
-2. Word Counter — done, see `word-counter.html`
+   library; everything else is fully self-contained). Explainer section
+   covers why pixel width (not character count) drives truncation, and
+   why bold keywords appear in real Google results.
+2. Word Counter — done, see `word-counter.html`. Includes an explainer
+   section covering the 200wpm reading-time assumption and common length
+   guidelines (tweets, meta descriptions, blog intros).
 3. Campaign URL Builder / UTM Builder — done, see `utm-builder.html`.
-   Required fields (URL, source, medium, name) plus optional term/content,
-   builds a live UTM query string, copy-to-clipboard, reset.
+   Fields match a common reference layout: URL, Campaign ID (optional),
+   source, medium, name (either name or ID required), term, content — each
+   with helper caption text. Builds a live UTM query string,
+   copy-to-clipboard, reset, plus a parameter reference table at the
+   bottom.
 4. Meta Tag Generator — done, see `meta-tag-generator.html`. Generates
    title, meta description, canonical link, Open Graph, and Twitter Card
    tags from one shared set of fields (title/description/image reused
-   across OG and Twitter). Copy-to-clipboard, reset.
-5. Slug Generator
+   across OG and Twitter). Copy-to-clipboard, reset, plus a reference
+   table explaining what each tag does and where it shows up.
+5. Slug Generator — done, see `slug-generator.html`. Lowercase toggle,
+   hyphen/underscore separator choice, strips accents and unsafe
+   characters, collapses repeated separators. Copy-to-clipboard, reset.
 6. Robots.txt Generator
 7. Open Graph Preview Tool
 8. Keyword Density Checker
