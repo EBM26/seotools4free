@@ -4,192 +4,288 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free SEO & Dev Tools</title>
-  <meta name="description" content="A collection of free, fast, no-signup SEO and developer tools." />
+  <meta name="description" content="23 free, fast, single-purpose SEO, dev, and AI tools. No signup, no upsells." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
-<body>
+<body class="home">
 
   <div id="site-header"></div>
 
-  <main>
-    <div class="tool-eyebrow">23 tools / no signup</div>
-    <h1 class="tool-title">Free SEO &amp; dev tools</h1>
-    <p class="tool-description">Small, fast, single-purpose tools. Pick one below.</p>
+  <a id="top"></a>
+  <main class="home-max">
 
-    <input type="search" id="tool-search" class="tool-search" placeholder="Search tools…" aria-label="Search tools" />
+    <section class="home-hero">
+      <div class="home-badge">
+        <span class="home-badge__label">23 free tools</span>
+        <span class="home-badge__pill">No signup</span>
+      </div>
+      <h1 class="home-hero__title">The small SEO &amp; dev tools you actually reach for.</h1>
+      <p class="home-hero__subtitle">Fast, single-purpose, and genuinely free. No accounts, no upsells, no cookie wall — just open one and get on with your day.</p>
 
-    <div class="tool-list" id="tool-list">
-      <a class="tool-list__item" href="serp-simulator.html">
-        <span class="tool-list__index">01</span>
-        <span>
-          <span class="tool-list__name">Google SERP Simulator</span><br />
-          <span class="tool-list__desc">Preview how your title and meta description look in Google results.</span>
+      <div class="home-search">
+        <span class="home-search__icon">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="13.0667" cy="13.0667" r="9.06667" stroke="currentColor" stroke-width="1.6"></circle><path d="M26.6666 26.6667L22.1333 22.1334" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
         </span>
-      </a>
-      <a class="tool-list__item" href="word-counter.html">
-        <span class="tool-list__index">02</span>
-        <span>
-          <span class="tool-list__name">Word Counter</span><br />
-          <span class="tool-list__desc">Count words, characters, sentences, and reading time.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="utm-builder.html">
-        <span class="tool-list__index">03</span>
-        <span>
-          <span class="tool-list__name">Campaign URL Builder</span><br />
-          <span class="tool-list__desc">Generate UTM-tagged tracking links for your campaigns.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="meta-tag-generator.html">
-        <span class="tool-list__index">04</span>
-        <span>
-          <span class="tool-list__name">Meta Tag Generator</span><br />
-          <span class="tool-list__desc">Generate title, description, Open Graph, and Twitter Card tags.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="slug-generator.html">
-        <span class="tool-list__index">05</span>
-        <span>
-          <span class="tool-list__name">Slug Generator</span><br />
-          <span class="tool-list__desc">Turn any title into a clean, URL-safe slug.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="robots-txt-generator.html">
-        <span class="tool-list__index">06</span>
-        <span>
-          <span class="tool-list__name">Robots.txt Generator</span><br />
-          <span class="tool-list__desc">Build a robots.txt file with custom crawler rules and a sitemap directive.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="og-preview-tool.html">
-        <span class="tool-list__index">07</span>
-        <span>
-          <span class="tool-list__name">Open Graph Preview Tool</span><br />
-          <span class="tool-list__desc">Preview how your page looks when shared on Facebook, Twitter/X, and LinkedIn.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="keyword-density-checker.html">
-        <span class="tool-list__index">08</span>
-        <span>
-          <span class="tool-list__name">Keyword Density Checker</span><br />
-          <span class="tool-list__desc">See which words and phrases repeat the most in your content, and how often.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="schema-markup-generator.html">
-        <span class="tool-list__index">09</span>
-        <span>
-          <span class="tool-list__name">Schema Markup Generator</span><br />
-          <span class="tool-list__desc">Generate JSON-LD structured data for Article, Product, FAQ, and Local Business pages.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="lorem-ipsum-generator.html">
-        <span class="tool-list__index">10</span>
-        <span>
-          <span class="tool-list__name">Lorem Ipsum Generator</span><br />
-          <span class="tool-list__desc">Generate placeholder text by paragraphs, sentences, or words.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="css-clamp-calculator.html">
-        <span class="tool-list__index">11</span>
-        <span>
-          <span class="tool-list__name">CSS Clamp / Fluid Typography Calculator</span><br />
-          <span class="tool-list__desc">Generate a responsive font-size clamp() value with a live preview.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="readability-checker.html">
-        <span class="tool-list__index">12</span>
-        <span>
-          <span class="tool-list__name">Readability Score Checker</span><br />
-          <span class="tool-list__desc">Check Flesch Reading Ease and Flesch-Kincaid Grade Level for your content.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="color-contrast-checker.html">
-        <span class="tool-list__index">13</span>
-        <span>
-          <span class="tool-list__name">Color Contrast Checker</span><br />
-          <span class="tool-list__desc">Check text/background contrast ratio against WCAG AA and AAA guidelines.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="favicon-generator.html">
-        <span class="tool-list__index">14</span>
-        <span>
-          <span class="tool-list__name">Favicon Generator</span><br />
-          <span class="tool-list__desc">Generate every favicon and app icon size from one image, plus a ZIP and HTML tags.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="prompt-token-counter.html">
-        <span class="tool-list__index">15</span>
-        <span>
-          <span class="tool-list__name">AI Prompt Token Counter</span><br />
-          <span class="tool-list__desc">Estimate token count and context window usage for your AI prompts.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="prompt-template-builder.html">
-        <span class="tool-list__index">16</span>
-        <span>
-          <span class="tool-list__name">Prompt Template Builder</span><br />
-          <span class="tool-list__desc">Build reusable AI prompt templates with fill-in-the-blank variables.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="ai-cost-calculator.html">
-        <span class="tool-list__index">17</span>
-        <span>
-          <span class="tool-list__name">AI API Cost Calculator</span><br />
-          <span class="tool-list__desc">Estimate API request cost from token counts and your provider's pricing.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="prompt-injection-checker.html">
-        <span class="tool-list__index">18</span>
-        <span>
-          <span class="tool-list__name">Prompt Injection Checker</span><br />
-          <span class="tool-list__desc">Scan text for common prompt injection phrasing before feeding it to an LLM.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="llms-txt-generator.html">
-        <span class="tool-list__index">19</span>
-        <span>
-          <span class="tool-list__name">llms.txt Generator</span><br />
-          <span class="tool-list__desc">Generate an llms.txt file with a summary and grouped key links.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="ai-content-detector.html">
-        <span class="tool-list__index">20</span>
-        <span>
-          <span class="tool-list__name">AI Content Detector</span><br />
-          <span class="tool-list__desc">Heuristic 0-100 estimate of how AI-like a piece of text's writing patterns are.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="markdown-cleaner.html">
-        <span class="tool-list__index">21</span>
-        <span>
-          <span class="tool-list__name">Markdown to Plain Text Converter</span><br />
-          <span class="tool-list__desc">Strip markdown syntax to clean plain text, with a token-savings estimate.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="system-prompt-analyzer.html">
-        <span class="tool-list__index">22</span>
-        <span>
-          <span class="tool-list__name">System Prompt Analyzer</span><br />
-          <span class="tool-list__desc">Check a system prompt for length, sentence complexity, and contradictions.</span>
-        </span>
-      </a>
-      <a class="tool-list__item" href="hreflang-generator.html">
-        <span class="tool-list__index">23</span>
-        <span>
-          <span class="tool-list__name">Hreflang Tag Generator</span><br />
-          <span class="tool-list__desc">Generate hreflang link tags for multiple language/region page versions.</span>
-        </span>
-      </a>
-    </div>
-    <p class="field-hint" id="tool-search-empty" style="display: none;">No tools match your search.</p>
+        <input type="text" id="tool-search" placeholder="Search 23 tools — try &ldquo;schema&rdquo;, &ldquo;tokens&rdquo;, &ldquo;contrast&rdquo;&hellip;" aria-label="Search tools" />
+      </div>
+
+      <div class="home-pills">
+        <button type="button" class="home-pill is-active" data-cat="all" aria-pressed="true">All tools</button>
+        <button type="button" class="home-pill" data-cat="seo" aria-pressed="false">SEO</button>
+        <button type="button" class="home-pill" data-cat="dev" aria-pressed="false">Dev</button>
+        <button type="button" class="home-pill" data-cat="ai" aria-pressed="false">AI &amp; LLM</button>
+      </div>
+    </section>
+
+    <section id="tools" class="home-tools">
+
+      <div class="home-section" data-cat="seo">
+        <div class="home-section__head">
+          <span class="home-section__icon home-section__icon--seo">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M16 4.5C16.427 4.5 16.8941 4.72866 17.3779 5.27441C17.8613 5.81959 18.319 6.63748 18.7139 7.69043C19.5022 9.7927 20 12.7305 20 16C20 19.2695 19.5022 22.2073 18.7139 24.3096C18.319 25.3625 17.8613 26.1804 17.3779 26.7256C16.8941 27.2713 16.427 27.5 16 27.5C15.573 27.5 15.1059 27.2713 14.6221 26.7256C14.1387 26.1804 13.681 25.3625 13.2861 24.3096C12.4978 22.2073 12 19.2695 12 16C12 12.7305 12.4978 9.7927 13.2861 7.69043C13.681 6.63748 14.1387 5.81959 14.6221 5.27441C15.1059 4.72866 15.573 4.5 16 4.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M4.75 16H27.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          </span>
+          <div>
+            <div class="home-section__eyebrow">Search &amp; on-page</div>
+            <h2 class="home-section__title">SEO tools</h2>
+          </div>
+        </div>
+        <div class="home-grid">
+
+          <a href="serp-simulator.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Google SERP Simulator</div>
+            <div class="home-card__desc">See exactly how your title and description show up in Google before you hit publish.</div>
+          </a>
+
+          <a href="utm-builder.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Campaign URL Builder</div>
+            <div class="home-card__desc">Build clean UTM-tagged links so every click lands in your analytics.</div>
+          </a>
+
+          <a href="meta-tag-generator.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Meta Tag Generator</div>
+            <div class="home-card__desc">Spin up title, description, Open Graph, and Twitter Card tags in one go.</div>
+          </a>
+
+          <a href="slug-generator.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Slug Generator</div>
+            <div class="home-card__desc">Turn any messy title into a tidy, URL-safe slug.</div>
+          </a>
+
+          <a href="robots-txt-generator.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Robots.txt Generator</div>
+            <div class="home-card__desc">Set crawler rules and point bots to your sitemap — no syntax to memorize.</div>
+          </a>
+
+          <a href="og-preview-tool.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Open Graph Preview</div>
+            <div class="home-card__desc">See your share card on Facebook, X, and LinkedIn before you post.</div>
+          </a>
+
+          <a href="keyword-density-checker.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Keyword Density Checker</div>
+            <div class="home-card__desc">Find which words and phrases you're leaning on, and how hard.</div>
+          </a>
+
+          <a href="schema-markup-generator.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Schema Markup Generator</div>
+            <div class="home-card__desc">Generate JSON-LD for articles, products, FAQs, and local business pages.</div>
+          </a>
+
+          <a href="readability-checker.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Readability Score Checker</div>
+            <div class="home-card__desc">Get Flesch reading ease and grade level for anything you write.</div>
+          </a>
+
+          <a href="hreflang-generator.html" class="home-card home-card--seo">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Hreflang Tag Generator</div>
+            <div class="home-card__desc">Wire up hreflang tags for every language and region you serve.</div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="home-section" data-cat="dev">
+        <div class="home-section__head">
+          <span class="home-section__icon home-section__icon--dev">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><path d="M6.6665 16L6.6665 5.33333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M25.3335 26.6667L25.3335 22.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M6.6665 26.6667L6.6665 21.3334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M25.3335 17.3333L25.3335 5.33331" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M16 9.33331L16 5.33331" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M16 26.6667L16 14.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><circle cx="6.66667" cy="18.6667" r="2.66667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="16.0002" cy="12" r="2.66667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="25.3332" cy="20" r="2.66667" stroke="currentColor" stroke-width="1.5"></circle></svg>
+          </span>
+          <div>
+            <div class="home-section__eyebrow">Build &amp; format</div>
+            <h2 class="home-section__title">Dev tools</h2>
+          </div>
+        </div>
+        <div class="home-grid">
+
+          <a href="word-counter.html" class="home-card home-card--dev">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Word Counter</div>
+            <div class="home-card__desc">Words, characters, sentences, and a quick reading-time estimate.</div>
+          </a>
+
+          <a href="lorem-ipsum-generator.html" class="home-card home-card--dev">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Lorem Ipsum Generator</div>
+            <div class="home-card__desc">Placeholder text by the paragraph, sentence, or word.</div>
+          </a>
+
+          <a href="css-clamp-calculator.html" class="home-card home-card--dev">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">CSS Clamp Calculator</div>
+            <div class="home-card__desc">Dial in a responsive font-size clamp() with a live preview.</div>
+          </a>
+
+          <a href="color-contrast-checker.html" class="home-card home-card--dev">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Color Contrast Checker</div>
+            <div class="home-card__desc">Check any text/background pair against WCAG AA and AAA.</div>
+          </a>
+
+          <a href="favicon-generator.html" class="home-card home-card--dev">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Favicon Generator</div>
+            <div class="home-card__desc">One image in, every favicon and app-icon size out — plus a ready ZIP.</div>
+          </a>
+
+          <a href="markdown-cleaner.html" class="home-card home-card--dev">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Markdown to Plain Text</div>
+            <div class="home-card__desc">Strip markdown down to clean text, with token savings shown.</div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="home-section" data-cat="ai">
+        <div class="home-section__head">
+          <span class="home-section__icon home-section__icon--ai">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M13.3335 18.6667L9.3335 22.6667" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M13.3333 13.3333L8 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="22.6667" cy="22.6667" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="26.6667" cy="16" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><path d="M24.6668 16H19.3335" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M18.6665 18.6667L21.3332 21.3334" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="25.3335" cy="6.66669" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M22.6665 9.33331L18.6665 13.3333" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="6.66667" cy="6.66667" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="6.6665" cy="25.3333" r="3.5" stroke="currentColor" stroke-width="1.5"></circle></svg>
+          </span>
+          <div>
+            <div class="home-section__eyebrow">Prompts &amp; models</div>
+            <h2 class="home-section__title">AI &amp; LLM tools</h2>
+          </div>
+        </div>
+        <div class="home-grid">
+
+          <a href="prompt-token-counter.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI Prompt Token Counter</div>
+            <div class="home-card__desc">Estimate tokens and how much of the context window you're using.</div>
+          </a>
+
+          <a href="prompt-template-builder.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Prompt Template Builder</div>
+            <div class="home-card__desc">Save reusable prompts with fill-in-the-blank variables.</div>
+          </a>
+
+          <a href="ai-cost-calculator.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI API Cost Calculator</div>
+            <div class="home-card__desc">Turn token counts and provider pricing into a real dollar figure.</div>
+          </a>
+
+          <a href="prompt-injection-checker.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Prompt Injection Checker</div>
+            <div class="home-card__desc">Scan text for sneaky injection phrasing before it hits your model.</div>
+          </a>
+
+          <a href="llms-txt-generator.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">llms.txt Generator</div>
+            <div class="home-card__desc">Generate an llms.txt with a summary and grouped key links.</div>
+          </a>
+
+          <a href="ai-content-detector.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI Content Detector</div>
+            <div class="home-card__desc">A quick 0–100 read on how AI-like a piece of writing feels.</div>
+          </a>
+
+          <a href="system-prompt-analyzer.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">System Prompt Analyzer</div>
+            <div class="home-card__desc">Check a system prompt for length, complexity, and contradictions.</div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="home-empty" id="home-empty" hidden>
+        <div class="home-empty__icon">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="13.0667" cy="13.0667" r="9.06667" stroke="currentColor" stroke-width="1.6"></circle><path d="M26.6666 26.6667L22.1333 22.1334" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        </div>
+        <div class="home-empty__title">No tools match &ldquo;<span class="home-empty__query"></span>&rdquo;</div>
+        <div class="home-empty__hint">Try a shorter word, or clear the search to see all 23.</div>
+      </div>
+
+    </section>
   </main>
 
   <div id="site-footer"></div>
 
   <script src="js/include.js"></script>
-  <script src="js/tool-search.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
