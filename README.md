@@ -60,7 +60,14 @@ indexable/SEO-friendly.
 5. Slug Generator — done, see `slug-generator.html`. Lowercase toggle,
    hyphen/underscore separator choice, strips accents and unsafe
    characters, collapses repeated separators. Copy-to-clipboard, reset.
-6. Robots.txt Generator
+6. Robots.txt Generator — done, see `robots-txt-generator.html`. Preset
+   starting points (allow all / block all / start from scratch), add/remove
+   repeatable user-agent groups (agent name, disallow paths, allow paths),
+   optional sitemap URL field. Copy-to-clipboard, download as `robots.txt`,
+   reset. Explainer section
+   covers User-agent/Disallow/Allow syntax, the Sitemap directive, why
+   Crawl-delay is left out (ignored by Google), and why robots.txt is the
+   wrong tool for keeping a page out of search results (use noindex instead).
 7. Open Graph Preview Tool
 8. Keyword Density Checker
 9. Schema Markup Generator
