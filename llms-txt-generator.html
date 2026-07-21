@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>llms.txt Generator — Free LLM Context File Creator</title>
+  <meta name="description" content="Generate an llms.txt file with a summary and grouped key links for your site or project, ready to publish at your domain root. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 19 / AI</div>
+    <h1 class="tool-title">llms.txt Generator</h1>
+    <p class="tool-description">Fill in your site details and key links, then copy or download the result as <code>llms.txt</code> at your site's root.</p>
+
+    <div class="tool-card">
+      <label for="input-name">Site / project name</label>
+      <input type="text" id="input-name" placeholder="e.g. Example Docs" />
+
+      <div style="margin-top: 18px;">
+        <label for="input-description">One-line description</label>
+        <input type="text" id="input-description" placeholder="e.g. Reference documentation and guides for the Example API." />
+        <p class="field-hint">Becomes the blockquote summary right under the title, keep it to one clear sentence.</p>
+      </div>
+
+      <div style="margin-top: 18px;">
+        <label for="input-summary">Detailed summary <span class="serp-charcount">optional</span></label>
+        <textarea id="input-summary" rows="3" placeholder="A short paragraph or two of extra context an LLM would find useful before reading the links below."></textarea>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Key links</label>
+      <div id="sections-container"></div>
+      <button type="button" class="btn btn--secondary btn--small" id="btn-add-section">+ Add section</button>
+    </div>
+
+    <div class="tool-card">
+      <label>Preview</label>
+      <div id="llms-preview" class="llms-preview"></div>
+    </div>
+
+    <div class="tool-card">
+      <label for="output-llms">Generated llms.txt</label>
+      <textarea id="output-llms" readonly rows="14" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg); min-height: 300px;"></textarea>
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy llms.txt</button>
+        <button type="button" class="btn btn--secondary" id="btn-download">Download llms.txt</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p><code>llms.txt</code> is a proposed convention (from <a href="https://llmstxt.org">llmstxt.org</a>) for giving AI models a short, structured entry point to a site or project: a title, a one-line summary, optional extra context, and a curated set of links grouped by section, all in plain Markdown at <code>example.com/llms.txt</code>. It's meant to be read alongside or instead of crawling your full site, since most pages contain a lot of navigation, styling, and boilerplate that isn't useful context for a model.</p>
+      <h3>Why grouped sections</h3>
+      <p>Section headers (like "Docs" or "Examples") let a model, or a person, scan straight to the category of link they need instead of one flat list. The convention also recognizes a special <code>Optional</code> section name for links that are useful but skippable if a model is working with a shorter context window, use it for secondary material like a changelog or a blog.</p>
+      <h3>This is an emerging, unofficial convention</h3>
+      <p>Unlike <code>robots.txt</code>, <code>llms.txt</code> isn't a web standard and no major AI provider has committed to reading it automatically yet. Publishing one costs little and may help tools that do support it, but don't treat it as a guaranteed way to influence how a model discusses your site today.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/llms-txt-generator.js"></script>
+</body>
+</html>

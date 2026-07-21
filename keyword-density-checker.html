@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyword Density Checker — Free Keyword Frequency Tool</title>
+  <meta name="description" content="Check keyword and phrase density in your content instantly. See top single-word and multi-word repetition. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 08 / SEO</div>
+    <h1 class="tool-title">Keyword Density Checker</h1>
+    <p class="tool-description">Paste your content below to see which words and phrases repeat the most, and how often, updated live as you type.</p>
+
+    <div class="tool-card">
+      <label for="input-text">Your content</label>
+      <textarea id="input-text" rows="10" placeholder="Paste your article, product page, or blog post here..."></textarea>
+
+      <div style="margin-top: 18px;">
+        <label for="input-focus">Focus keyword <span class="serp-charcount">optional</span></label>
+        <input type="text" id="input-focus" placeholder="e.g. free seo tools" />
+        <p class="field-hint" id="focus-result"></p>
+      </div>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-words">0</div>
+          <div class="stat__label">Total words</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-unique">0</div>
+          <div class="stat__label">Unique words</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Word length</label>
+      <div class="serp-toggle">
+        <button type="button" class="serp-toggle__btn is-active" data-length="1">Single words</button>
+        <button type="button" class="serp-toggle__btn" data-length="2">2-word phrases</button>
+        <button type="button" class="serp-toggle__btn" data-length="3">3-word phrases</button>
+      </div>
+
+      <div id="stopword-option" style="margin-top: 14px; display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="input-exclude-common" checked style="width: auto; margin: 0;" />
+        <label for="input-exclude-common" style="margin: 0; text-transform: none; font-family: var(--font-body); font-size: 0.9rem; color: var(--color-text);">Exclude common words (the, and, is...)</label>
+      </div>
+
+      <table class="utm-reference" style="margin-top: 18px;">
+        <thead>
+          <tr>
+            <th id="table-header">Word</th>
+            <th>Count</th>
+            <th>Density</th>
+          </tr>
+        </thead>
+        <tbody id="density-rows">
+          <tr><td colspan="3">Paste content above to see results.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Keyword density is how often a word or phrase appears in your content relative to the total word count. This counts single words and multi-word phrases as you type, so you can spot unintentional over-repetition or confirm your target keyword shows up often enough to signal what the page is about.</p>
+      <h3>What counts as a "common word"</h3>
+      <p>With the checkbox on, filler words like "the," "and," "is," and "of" are excluded from the single-word table, since they naturally appear often in any text and would otherwise crowd out more meaningful words. Phrase tables (2-word, 3-word) are left unfiltered, since phrases like "in the" can still be part of a meaningful longer phrase.</p>
+      <h3>What density to aim for</h3>
+      <p>There's no strict rule search engines enforce, but a common guideline is keeping a focus keyword around 1 to 2% of total word count. Far above that risks reading as repetitive or spammy; the more important signal is using a keyword and its natural variations where they genuinely fit the content.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/keyword-density-checker.js"></script>
+</body>
+</html>

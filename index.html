@@ -15,11 +15,13 @@
   <div id="site-header"></div>
 
   <main>
-    <div class="tool-eyebrow">17 tools / no signup</div>
+    <div class="tool-eyebrow">23 tools / no signup</div>
     <h1 class="tool-title">Free SEO &amp; dev tools</h1>
     <p class="tool-description">Small, fast, single-purpose tools. Pick one below.</p>
 
-    <div class="tool-list">
+    <input type="search" id="tool-search" class="tool-search" placeholder="Search tools…" aria-label="Search tools" />
+
+    <div class="tool-list" id="tool-list">
       <a class="tool-list__item" href="serp-simulator.html">
         <span class="tool-list__index">01</span>
         <span>
@@ -62,11 +64,132 @@
           <span class="tool-list__desc">Build a robots.txt file with custom crawler rules and a sitemap directive.</span>
         </span>
       </a>
+      <a class="tool-list__item" href="og-preview-tool.html">
+        <span class="tool-list__index">07</span>
+        <span>
+          <span class="tool-list__name">Open Graph Preview Tool</span><br />
+          <span class="tool-list__desc">Preview how your page looks when shared on Facebook, Twitter/X, and LinkedIn.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="keyword-density-checker.html">
+        <span class="tool-list__index">08</span>
+        <span>
+          <span class="tool-list__name">Keyword Density Checker</span><br />
+          <span class="tool-list__desc">See which words and phrases repeat the most in your content, and how often.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="schema-markup-generator.html">
+        <span class="tool-list__index">09</span>
+        <span>
+          <span class="tool-list__name">Schema Markup Generator</span><br />
+          <span class="tool-list__desc">Generate JSON-LD structured data for Article, Product, FAQ, and Local Business pages.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="lorem-ipsum-generator.html">
+        <span class="tool-list__index">10</span>
+        <span>
+          <span class="tool-list__name">Lorem Ipsum Generator</span><br />
+          <span class="tool-list__desc">Generate placeholder text by paragraphs, sentences, or words.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="css-clamp-calculator.html">
+        <span class="tool-list__index">11</span>
+        <span>
+          <span class="tool-list__name">CSS Clamp / Fluid Typography Calculator</span><br />
+          <span class="tool-list__desc">Generate a responsive font-size clamp() value with a live preview.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="readability-checker.html">
+        <span class="tool-list__index">12</span>
+        <span>
+          <span class="tool-list__name">Readability Score Checker</span><br />
+          <span class="tool-list__desc">Check Flesch Reading Ease and Flesch-Kincaid Grade Level for your content.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="color-contrast-checker.html">
+        <span class="tool-list__index">13</span>
+        <span>
+          <span class="tool-list__name">Color Contrast Checker</span><br />
+          <span class="tool-list__desc">Check text/background contrast ratio against WCAG AA and AAA guidelines.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="favicon-generator.html">
+        <span class="tool-list__index">14</span>
+        <span>
+          <span class="tool-list__name">Favicon Generator</span><br />
+          <span class="tool-list__desc">Generate every favicon and app icon size from one image, plus a ZIP and HTML tags.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="prompt-token-counter.html">
+        <span class="tool-list__index">15</span>
+        <span>
+          <span class="tool-list__name">AI Prompt Token Counter</span><br />
+          <span class="tool-list__desc">Estimate token count and context window usage for your AI prompts.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="prompt-template-builder.html">
+        <span class="tool-list__index">16</span>
+        <span>
+          <span class="tool-list__name">Prompt Template Builder</span><br />
+          <span class="tool-list__desc">Build reusable AI prompt templates with fill-in-the-blank variables.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="ai-cost-calculator.html">
+        <span class="tool-list__index">17</span>
+        <span>
+          <span class="tool-list__name">AI API Cost Calculator</span><br />
+          <span class="tool-list__desc">Estimate API request cost from token counts and your provider's pricing.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="prompt-injection-checker.html">
+        <span class="tool-list__index">18</span>
+        <span>
+          <span class="tool-list__name">Prompt Injection Checker</span><br />
+          <span class="tool-list__desc">Scan text for common prompt injection phrasing before feeding it to an LLM.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="llms-txt-generator.html">
+        <span class="tool-list__index">19</span>
+        <span>
+          <span class="tool-list__name">llms.txt Generator</span><br />
+          <span class="tool-list__desc">Generate an llms.txt file with a summary and grouped key links.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="ai-content-detector.html">
+        <span class="tool-list__index">20</span>
+        <span>
+          <span class="tool-list__name">AI Content Detector</span><br />
+          <span class="tool-list__desc">Heuristic 0-100 estimate of how AI-like a piece of text's writing patterns are.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="markdown-cleaner.html">
+        <span class="tool-list__index">21</span>
+        <span>
+          <span class="tool-list__name">Markdown to Plain Text Converter</span><br />
+          <span class="tool-list__desc">Strip markdown syntax to clean plain text, with a token-savings estimate.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="system-prompt-analyzer.html">
+        <span class="tool-list__index">22</span>
+        <span>
+          <span class="tool-list__name">System Prompt Analyzer</span><br />
+          <span class="tool-list__desc">Check a system prompt for length, sentence complexity, and contradictions.</span>
+        </span>
+      </a>
+      <a class="tool-list__item" href="hreflang-generator.html">
+        <span class="tool-list__index">23</span>
+        <span>
+          <span class="tool-list__name">Hreflang Tag Generator</span><br />
+          <span class="tool-list__desc">Generate hreflang link tags for multiple language/region page versions.</span>
+        </span>
+      </a>
     </div>
+    <p class="field-hint" id="tool-search-empty" style="display: none;">No tools match your search.</p>
   </main>
 
   <div id="site-footer"></div>
 
   <script src="js/include.js"></script>
+  <script src="js/tool-search.js"></script>
 </body>
 </html>

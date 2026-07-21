@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favicon Generator — Free Favicon & App Icon Creator</title>
+  <meta name="description" content="Upload one image and generate every favicon and app icon size you need, plus the <link> tags and a downloadable ZIP. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 14 / Design</div>
+    <h1 class="tool-title">Favicon Generator</h1>
+    <p class="tool-description">Upload one image to generate every common favicon and app icon size, the &lt;head&gt; tags to reference them, and a ZIP with everything bundled together.</p>
+
+    <div class="tool-card">
+      <label for="input-image">Source image</label>
+      <input type="file" id="input-image" accept="image/png, image/jpeg, image/webp, image/svg+xml" />
+      <p class="field-hint">PNG, JPG, WebP, or SVG. A square image with no extra padding works best, non-square images are centered on a transparent square instead of cropped.</p>
+    </div>
+
+    <div class="tool-card">
+      <label>Generated sizes</label>
+      <div id="favicon-grid" class="favicon-grid">
+        <p class="favicon-grid__empty">Upload an image above to generate favicon sizes.</p>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label for="output-html">HTML to paste in &lt;head&gt;</label>
+      <textarea id="output-html" readonly rows="8" style="font-family: var(--font-mono); font-size: 0.82rem; background: var(--color-bg);"></textarea>
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy-html">Copy HTML</button>
+        <button type="button" class="btn btn--secondary" id="btn-download-zip">Download All (ZIP)</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>A complete favicon setup needs more than one image size: small ones for browser tabs, a 180×180 for Apple's home-screen icon, and 192×192 / 512×512 for Android and installable web apps (PWAs). This resizes your one source image into all of them at once, entirely in your browser, nothing is uploaded anywhere.</p>
+      <h3>What's in the ZIP</h3>
+      <p>Six PNGs (16×16, 32×32, 48×48, apple-touch-icon at 180×180, and 192×192 / 512×512 for Android), plus a <code>favicon.ico</code> built from the 16/32/48px images. Drop all seven files in your site's root and paste the generated &lt;link&gt; tags into your &lt;head&gt;.</p>
+      <h3>Why sizes beyond a single favicon.ico</h3>
+      <p>A single small icon looks blurry when scaled up for a phone home screen or app switcher. Serving purpose-sized PNGs for each context (browser tab, iOS home screen, Android/PWA) keeps the icon sharp everywhere it shows up, instead of relying on one image stretched to fit every use.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/favicon-generator.js"></script>
+</body>
+</html>

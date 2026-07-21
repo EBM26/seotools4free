@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Content Detector — Free Heuristic AI Writing Estimator</title>
+  <meta name="description" content="Estimate the likelihood that text was AI-generated using writing-pattern heuristics: burstiness, phrasing, vocabulary diversity, and pacing. Free, no signup — and clearly not a definitive detector." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 20 / AI</div>
+    <h1 class="tool-title">AI Content Detector</h1>
+    <p class="tool-description">Paste text, then click Scan Text to get a heuristic estimate of how strongly its writing patterns resemble typical AI-generated text.</p>
+
+    <div class="serp-warning is-visible" style="margin-bottom: 20px;">
+      This is a heuristic estimate based on writing-pattern statistics, not a verdict. It has no access to how the text was actually produced, can be confidently wrong in both directions, and should never be the sole basis for an accusation of AI use.
+    </div>
+
+    <div class="tool-card">
+      <label for="input-text">Text to analyze</label>
+      <textarea id="input-text" rows="12" placeholder="Paste at least a few paragraphs of text here, longer samples give more reliable signal..."></textarea>
+      <p class="field-hint" id="length-hint">Paste at least 50 words, then click Scan Text. Longer text (300+ words) gives more reliable signals.</p>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-scan">Scan Text</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+      <p class="field-hint" id="stale-note" style="display: none;">Text has changed since the last scan, click Scan Text to refresh the results below.</p>
+
+      <div class="tool-output">
+        <div class="stat" style="flex: 1 1 200px;">
+          <div class="stat__value" id="stat-ai-percent">—</div>
+          <div class="stat__label">Likely AI-written</div>
+        </div>
+        <div class="stat" style="flex: 1 1 200px;">
+          <div class="stat__value" id="stat-human-percent">—</div>
+          <div class="stat__label">Likely human-written</div>
+        </div>
+      </div>
+      <p class="field-hint" id="verdict-label"></p>
+    </div>
+
+    <div class="tool-card">
+      <label>Signal breakdown</label>
+      <table class="utm-reference">
+        <thead>
+          <tr>
+            <th>Signal</th>
+            <th>Measured value</th>
+            <th>Score</th>
+            <th>What it suggests</th>
+          </tr>
+        </thead>
+        <tbody id="breakdown-rows">
+          <tr><td colspan="4">Paste text above to see the breakdown.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>This looks for four statistical patterns sometimes associated with AI-generated writing, not for any specific model's "fingerprint." Each signal produces its own 0-100 sub-score, and the overall score is their average (a signal is skipped and excluded from the average if there isn't enough text to measure it reliably, short samples in particular can't support the pacing-consistency check).</p>
+      <h3>The four signals</h3>
+      <p><strong>Burstiness</strong> measures how much sentence length varies within the text, human writing tends to mix short and long sentences more than typical AI output. <strong>Common AI phrasing</strong> checks for stock transitions and phrases (like "in today's fast-paced world" or "plays a pivotal role") that show up disproportionately often in AI-generated writing. <strong>Vocabulary diversity</strong> is the type-token ratio, unique words divided by total words, lower diversity can indicate more repetitive, formulaic phrasing. <strong>Section-level pacing consistency</strong> checks whether average sentence length stays unusually constant across the whole piece rather than shifting naturally between sections.</p>
+      <h3>Why this can't be a real detector</h3>
+      <p>None of these signals are unique to AI text. A careful human writer can produce very uniform, formal prose, and AI output can be prompted or edited to vary wildly in style. Text length, genre, translation, and non-native English writing all shift these same statistics in ways this tool cannot tell apart from AI generation. Published research on AI-text detectors (including commercial ones) consistently finds meaningful false-positive rates, treat any single score, including this one, as a loose signal to investigate further, never as proof.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/ai-content-detector.js"></script>
+</body>
+</html>

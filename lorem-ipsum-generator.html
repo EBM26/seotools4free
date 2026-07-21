@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lorem Ipsum Generator — Free Placeholder Text Generator</title>
+  <meta name="description" content="Generate placeholder lorem ipsum text by paragraphs, sentences, or words. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 10 / Text</div>
+    <h1 class="tool-title">Lorem Ipsum Generator</h1>
+    <p class="tool-description">Pick a unit and an amount to generate placeholder text for mockups, layouts, or CMS testing.</p>
+
+    <div class="tool-card">
+      <label>Generate by</label>
+      <div class="serp-toggle">
+        <button type="button" class="serp-toggle__btn is-active" data-unit="paragraphs">Paragraphs</button>
+        <button type="button" class="serp-toggle__btn" data-unit="sentences">Sentences</button>
+        <button type="button" class="serp-toggle__btn" data-unit="words">Words</button>
+      </div>
+
+      <div style="margin-top: 18px;">
+        <label for="input-amount">Amount</label>
+        <input type="number" id="input-amount" min="1" max="50" value="3" style="width: 100%; padding: 13px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--color-bg); color: var(--color-text);" />
+      </div>
+
+      <div style="margin-top: 18px; display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="input-classic-start" checked style="width: auto; margin: 0;" />
+        <label for="input-classic-start" style="margin: 0; text-transform: none; font-family: var(--font-body); font-size: 0.9rem; color: var(--color-text);">Start with "Lorem ipsum dolor sit amet..."</label>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-text">Generated text</label>
+        <textarea id="output-text" readonly rows="12" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy">Copy text</button>
+          <button type="button" class="btn btn--secondary" id="btn-regenerate">Regenerate</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Lorem ipsum is scrambled, nonsensical Latin-derived text used as a stand-in for real content, in mockups, layout tests, or anywhere you need to see how a design handles text without waiting on final copy. Its meaninglessness is the point, it keeps a reviewer's attention on layout and spacing instead of reading the words.</p>
+      <h3>Paragraphs, sentences, or words</h3>
+      <p>Paragraphs are best for testing body copy and line-wrapping, sentences work well for short blocks like cards or callouts, and words are useful for testing tight spaces like buttons, labels, or table cells.</p>
+      <h3>Why it's not random gibberish</h3>
+      <p>The classic lorem ipsum passage comes from a scrambled section of a 1st-century BC Latin text by Cicero. It stuck around because it approximates the letter and word-length distribution of real language well enough to give a realistic sense of how a block of text will look, unlike a repeated placeholder phrase.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/lorem-ipsum-generator.js"></script>
+</body>
+</html>

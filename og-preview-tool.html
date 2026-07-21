@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Graph Preview Tool — Free Social Share Card Preview</title>
+  <meta name="description" content="Preview how your page will look when shared on Facebook, Twitter/X, and LinkedIn. Free Open Graph card preview tool, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 07 / Social</div>
+    <h1 class="tool-title">Open Graph Preview Tool</h1>
+    <p class="tool-description">Enter your page details to preview how the link card will look when shared on Facebook, Twitter/X, or LinkedIn.</p>
+
+    <div class="serp-layout">
+      <div class="tool-card">
+        <label for="input-url">Page URL</label>
+        <input type="text" id="input-url" placeholder="e.g. https://example.com/word-counter" />
+
+        <div style="margin-top: 18px;">
+          <label for="input-title">Title</label>
+          <input type="text" id="input-title" placeholder="e.g. Word Counter — Free Online Character and Word Count Tool" />
+        </div>
+
+        <div style="margin-top: 18px;">
+          <label for="input-description">Description</label>
+          <textarea id="input-description" placeholder="e.g. Count words, characters, and reading time instantly. Free, no signup required."></textarea>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <label for="input-image">Image URL</label>
+          <input type="text" id="input-image" placeholder="e.g. https://example.com/images/share.png" />
+          <p class="field-hint">Recommended: 1200×630px. Shown at 1.91:1 in all three previews below.</p>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <label for="input-sitename">Site name <span class="serp-charcount">optional</span></label>
+          <input type="text" id="input-sitename" placeholder="e.g. Example" />
+          <p class="field-hint">Overrides the domain shown under the preview. Leave blank to use the URL's domain.</p>
+        </div>
+
+        <div class="serp-actions">
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+          <button type="button" class="btn" id="btn-copy-tags">Copy tags</button>
+          <button type="button" class="btn" id="btn-share-link">Share a link</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+
+      <div class="tool-card">
+        <label>Preview</label>
+
+        <div class="serp-toggle">
+          <button type="button" class="serp-toggle__btn is-active" data-platform="facebook">Facebook</button>
+          <button type="button" class="serp-toggle__btn" data-platform="twitter">Twitter / X</button>
+          <button type="button" class="serp-toggle__btn" data-platform="linkedin">LinkedIn</button>
+        </div>
+
+        <div class="og-mock" id="og-mock">
+          <div class="og-mock__image" id="og-mock-image">1200 × 630 image</div>
+          <div class="og-mock__body">
+            <div class="og-mock__domain" id="og-mock-domain">example.com</div>
+            <div class="og-mock__title" id="og-mock-title">Your page title will appear here</div>
+            <div class="og-mock__description" id="og-mock-description">Your description will appear here, this is what shows below the title on most platforms.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>This approximates how your page will look as a shared link card, based on the Open Graph tags a platform reads from your page (<code>og:title</code>, <code>og:description</code>, <code>og:image</code>, <code>og:url</code>). Each platform renders its own layout and can crop or resize the image differently, so treat this as a close estimate rather than a pixel-exact match.</p>
+      <h3>Why the layout changes between platforms</h3>
+      <p>Facebook shows the domain in small caps above a bold title with description text below, on a light grey card. Twitter/X's large-image card looks similar but keeps a white background inside a rounded border. LinkedIn only shows the image, a bold title, and the domain, it doesn't render description text on the card at all.</p>
+      <h3>Image size and cropping</h3>
+      <p>A 1200×630px image (a 1.91:1 ratio) is the safe size across all three platforms, it fills the card without awkward cropping. Smaller or oddly-cropped images can get letterboxed or stretched depending on the platform.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/og-preview-tool.js"></script>
+</body>
+</html>

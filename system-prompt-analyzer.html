@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Prompt Analyzer — Free Heuristic System Prompt Checker</title>
+  <meta name="description" content="Analyze a system prompt for length, sentence complexity, contradictory instructions, and repeated phrases. Free heuristic checker, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 22 / AI</div>
+    <h1 class="tool-title">System Prompt Analyzer</h1>
+    <p class="tool-description">Paste a system prompt to get a plain-language report on its length, sentence complexity, contradictory instructions, and repeated phrasing.</p>
+
+    <div class="tool-card">
+      <label for="input-text">System prompt</label>
+      <textarea id="input-text" rows="14" placeholder="Paste your system prompt here..."></textarea>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-words">0</div>
+          <div class="stat__label">Words</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-tokens">0</div>
+          <div class="stat__label">Estimated tokens</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-sentences">0</div>
+          <div class="stat__label">Sentences</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-avg-sentence">0</div>
+          <div class="stat__label">Avg. words / sentence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Report</label>
+      <div id="report-list">
+        <p class="favicon-grid__empty">Paste a system prompt above to analyze it.</p>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>This is a plain-language report, not a score, since none of these checks can tell you whether a system prompt actually works, only whether it shows a few patterns worth a second look. Read the findings, not a single number.</p>
+      <h3>What it checks</h3>
+      <p><strong>Length flags</strong> note if the prompt is short enough to risk under-specifying behavior, or long enough that a model may lose weight on earlier instructions (and that every request pays token cost for it). <strong>Sentence length</strong> flags consistently long, complex sentences, which are more likely to be partially misread or only partially followed. <strong>Contradictory instructions</strong> looks for common opposite pairs (like "always" and "never") landing in the same sentence, a frequent source of inconsistent model behavior. <strong>Repeated phrases</strong> flags multi-word phrases repeated verbatim, often a sign of copy-pasted or merged instructions that could be stated once.</p>
+      <h3>Limitations</h3>
+      <p>These are surface-level pattern checks. A prompt can pass every check here and still be poorly written, and a prompt can trip a warning here while being perfectly fine in context, "always" and "never" in the same sentence isn't automatically wrong (e.g. "always ask before you never should skip confirmation" type constructions can be intentional). Treat every finding as a prompt to re-read that part of your prompt, not as an error to blindly fix.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/system-prompt-analyzer.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Clamp / Fluid Typography Calculator — Free Responsive Font Size Tool</title>
+  <meta name="description" content="Calculate a CSS clamp() value for fluid, responsive font sizes between a minimum and maximum viewport width. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 11 / CSS</div>
+    <h1 class="tool-title">CSS Clamp / Fluid Typography Calculator</h1>
+    <p class="tool-description">Set a minimum and maximum font size across a viewport width range, and get a <code>clamp()</code> value that scales smoothly between them.</p>
+
+    <div class="tool-card">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+          <label for="input-min-viewport">Min viewport width (px)</label>
+          <input type="number" id="input-min-viewport" value="320" min="1" />
+        </div>
+        <div>
+          <label for="input-max-viewport">Max viewport width (px)</label>
+          <input type="number" id="input-max-viewport" value="1280" min="1" />
+        </div>
+        <div>
+          <label for="input-min-size">Min font size (px)</label>
+          <input type="number" id="input-min-size" value="16" min="1" step="0.5" />
+        </div>
+        <div>
+          <label for="input-max-size">Max font size (px)</label>
+          <input type="number" id="input-max-size" value="24" min="1" step="0.5" />
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; max-width: 200px;">
+        <label for="input-root-size">Root font size (px)</label>
+        <input type="number" id="input-root-size" value="16" min="1" />
+        <p class="field-hint">Used to convert px to rem in the output. 16px is the browser default.</p>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-clamp">Generated CSS</label>
+        <textarea id="output-clamp" readonly rows="3" style="font-family: var(--font-mono); font-size: 0.9rem; background: var(--color-bg);"></textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy">Copy CSS</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label for="input-preview-width">Preview at viewport width <span class="serp-charcount" id="preview-readout">320px → 16px</span></label>
+      <input type="range" id="input-preview-width" min="200" max="2000" value="320" style="width: 100%;" />
+
+      <div style="margin-top: 20px; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; background: var(--color-bg);">
+        <div id="preview-box" style="margin: 0 auto; padding: 24px; background: #fff; transition: width 0.05s linear;">
+          <p id="preview-text" style="margin: 0; font-family: var(--font-display); font-weight: 600; color: var(--color-text); line-height: 1.3;">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>CSS <code>clamp(min, preferred, max)</code> lets a value like <code>font-size</code> scale smoothly with the viewport, instead of jumping between fixed sizes at media query breakpoints. This calculator works out the linear formula (a fixed rem value plus a <code>vw</code> unit) that connects your minimum size at your minimum viewport width to your maximum size at your maximum viewport width.</p>
+      <h3>How the formula works</h3>
+      <p>Below the minimum viewport width, the font stays at the minimum size. Above the maximum viewport width, it stays at the maximum size. Between the two, it scales linearly, calculated from the slope between the two size/width pairs you enter, expressed as a <code>vw</code> value so it responds to viewport width without JavaScript or media queries.</p>
+      <h3>Why rem, not px, in the output</h3>
+      <p>Using <code>rem</code> for the fixed part of the value keeps the result respecting a user's browser font-size setting (accessibility zoom), where a pure <code>px</code> value would not. The root font size field controls the px-to-rem conversion, change it only if your project sets a non-default root <code>font-size</code> on <code>html</code>.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/css-clamp-calculator.js"></script>
+</body>
+</html>

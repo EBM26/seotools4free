@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Prompt Token Counter — Free Character & Token Estimate Tool</title>
+  <meta name="description" content="Estimate how many tokens your AI prompt will use, and see how much of common model context windows it fills. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 15 / AI</div>
+    <h1 class="tool-title">AI Prompt Token Counter</h1>
+    <p class="tool-description">Paste your prompt below to see an estimated token count and how much of common model context windows it would use.</p>
+
+    <div class="tool-card">
+      <label for="input-text">Your prompt</label>
+      <textarea id="input-text" rows="10" placeholder="Paste your prompt or document here..."></textarea>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-characters">0</div>
+          <div class="stat__label">Characters</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-words">0</div>
+          <div class="stat__label">Words</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-tokens">0</div>
+          <div class="stat__label">Estimated tokens</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Context window usage</label>
+      <table class="utm-reference">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Context window</th>
+            <th>Estimated usage</th>
+          </tr>
+        </thead>
+        <tbody id="model-rows"></tbody>
+      </table>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Tokens are the units AI models actually read and bill by, they're not the same as characters or words. This estimates your token count using the common rule of thumb for English text (roughly 4 characters per token), since exact counts depend on the specific tokenizer each model family uses under the hood.</p>
+      <h3>Why this is an estimate, not an exact count</h3>
+      <p>Different model families (GPT, Claude, Gemini, Llama) use different tokenizers, so the same text can produce a different exact token count on each one. Whitespace, punctuation, and non-English text also tokenize less predictably than the simple 4-characters-per-token rule assumes. Treat this as a quick sanity check before pasting a long prompt, not a substitute for a model's official tokenizer.</p>
+      <h3>Context window figures</h3>
+      <p>The context window sizes listed above are commonly published maximums for each model family and can change between model versions, always confirm against the provider's current documentation before relying on them for production use.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/prompt-token-counter.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Injection Checker — Free Heuristic Scanner for AI Content</title>
+  <meta name="description" content="Scan text for common prompt injection and jailbreak phrasing before feeding it to an LLM. Free heuristic scanner, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 18 / AI</div>
+    <h1 class="tool-title">Prompt Injection Checker</h1>
+    <p class="tool-description">Paste text you're about to feed to an LLM (scraped content, a document, a user submission) to scan it for common injection and jailbreak phrasing.</p>
+
+    <div class="tool-card">
+      <label for="input-text">Text to scan</label>
+      <textarea id="input-text" rows="10" placeholder="Paste content here before passing it to an LLM as context, a document, or a tool result..."></textarea>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-findings">0</div>
+          <div class="stat__label">Potential issues found</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-hidden-chars">0</div>
+          <div class="stat__label">Hidden/invisible characters</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Findings</label>
+      <table class="utm-reference">
+        <thead>
+          <tr>
+            <th>Severity</th>
+            <th>Category</th>
+            <th>Matched text</th>
+          </tr>
+        </thead>
+        <tbody id="findings-rows">
+          <tr><td colspan="3">Paste text above to scan it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Prompt injection is when text handed to an LLM as data (a document, a scraped web page, a tool's output, a user message) contains instructions designed to override the system's actual instructions, for example "ignore all previous instructions" or "reveal your system prompt." This scans for common phrasing patterns associated with those attempts, plus hidden characters (zero-width Unicode) sometimes used to smuggle instructions past a casual read.</p>
+      <h3>This is a heuristic, not a guarantee</h3>
+      <p>This tool does pattern matching against known phrasings, it does not understand meaning or intent the way the target LLM does. A determined attacker can rephrase, translate, encode, or obfuscate an injection attempt to avoid every pattern here, and a clean scan result does not mean text is safe to trust. Treat this as one quick, free signal, not a security control on its own.</p>
+      <h3>Real defenses are architectural</h3>
+      <p>The mitigations that actually hold up are things like: never letting untrusted text carry the same privilege as your system instructions, keeping tool-use permissions scoped to what a task genuinely needs, validating and sandboxing anything an LLM's output goes on to trigger, and treating all retrieved or user-supplied content as data, never as instructions, no matter how it's phrased.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/prompt-injection-checker.js"></script>
+</body>
+</html>

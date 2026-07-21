@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hreflang Tag Generator — Free International SEO Tag Tool</title>
+  <meta name="description" content="Generate &lt;link rel=&quot;alternate&quot; hreflang=&quot;...&quot;&gt; tags for multiple language/region versions of a page, including x-default. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 23 / SEO</div>
+    <h1 class="tool-title">Hreflang Tag Generator</h1>
+    <p class="tool-description">Add a row for each language or region version of a page, then copy or download the generated &lt;link&gt; tags for that page's &lt;head&gt;.</p>
+
+    <div class="tool-card">
+      <label>Language / region versions</label>
+      <div id="hreflang-rows-container"></div>
+      <button type="button" class="btn btn--secondary btn--small" id="btn-add-row">+ Add row</button>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="input-xdefault">Default (x-default) URL <span class="serp-charcount">optional but recommended</span></label>
+        <input type="text" id="input-xdefault" placeholder="e.g. https://example.com/" />
+        <p class="field-hint">Shown to search engines when no other entry matches a visitor's language or region, commonly your default page or a language-selector page.</p>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label for="output-hreflang">Generated tags</label>
+      <textarea id="output-hreflang" readonly rows="12" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy tags</button>
+        <button type="button" class="btn btn--secondary" id="btn-download">Download</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p><code>hreflang</code> tags tell search engines which URL to show for a visitor's language and region when you have multiple localized versions of the same page. Each tag pairs a language code (optionally with a region) to the URL of that version, so the same full set of tags belongs on every one of those pages, including a link back to itself, not just on one "main" version.</p>
+      <h3>Language vs. language-region codes</h3>
+      <p>A code like <code>es</code> targets all Spanish speakers regardless of country, while <code>es-MX</code> targets Spanish speakers specifically in Mexico. Use the broader language-only code when you have one version per language, and add a region only when you actually have separate content per region, adding a region code you don't have distinct content for doesn't help and can create mismatches.</p>
+      <h3>Why x-default matters</h3>
+      <p><code>x-default</code> isn't a real language code, it's a reserved value marking the page to show visitors whose language/region doesn't match any of your other entries, typically a language-selector page or your default locale. Search engines don't strictly require it, but leaving it out means unmatched visitors get search engines' best guess instead of a page you chose.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/hreflang-generator.js"></script>
+</body>
+</html>

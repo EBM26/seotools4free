@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Template Builder — Free Reusable AI Prompt Tool</title>
+  <meta name="description" content="Build reusable AI prompt templates with variable placeholders, fill them in, and generate the final prompt instantly. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 16 / AI</div>
+    <h1 class="tool-title">Prompt Template Builder</h1>
+    <p class="tool-description">Write a prompt template using <code>{{double curly braces}}</code> for anything you'll want to swap out, then fill in the fields that appear below.</p>
+
+    <div class="tool-card">
+      <label for="input-template">Template</label>
+      <textarea id="input-template" rows="8" placeholder="e.g. Write a {{tone}} product description for {{product_name}}, aimed at {{audience}}. Keep it under {{word_limit}} words.">Write a {{tone}} product description for {{product_name}}, aimed at {{audience}}. Keep it under {{word_limit}} words.</textarea>
+      <p class="field-hint">Variable names can contain letters, numbers, spaces, and underscores. The same name used twice fills in both places at once.</p>
+    </div>
+
+    <div class="tool-card">
+      <label>Variables</label>
+      <div id="variables-container"></div>
+      <p class="field-hint" id="variables-empty-hint" style="display: none;">No variables found. Add one to your template using <code>{{like this}}</code>.</p>
+    </div>
+
+    <div class="tool-card">
+      <label for="output-prompt">Final prompt</label>
+      <textarea id="output-prompt" readonly rows="8" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy final prompt</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>A prompt template separates the reusable structure of a good prompt (the instructions, tone, and format) from the specific details that change each time you use it. Writing the structure once and swapping in details through fields is faster and more consistent than rewriting a full prompt from scratch every time, and it's easier to spot what changed between two versions.</p>
+      <h3>How variables work here</h3>
+      <p>Anything inside <code>{{double curly braces}}</code> in the template becomes a fill-in field automatically. Leave a field blank and the final prompt keeps the placeholder text as-is, so it's obvious at a glance what still needs a value before you copy it out.</p>
+      <h3>Good template habits</h3>
+      <p>Keep variable names short and descriptive (<code>{{audience}}</code> rather than <code>{{a}}</code>), and put format or length constraints directly in the template text rather than as a variable, so they're never accidentally left blank.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/prompt-template-builder.js"></script>
+</body>
+</html>

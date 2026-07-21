@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schema Markup Generator — Free JSON-LD Structured Data Tool</title>
+  <meta name="description" content="Generate JSON-LD structured data for Article, Product, FAQ, and Local Business pages, ready to paste into your page's head. Free, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 09 / SEO</div>
+    <h1 class="tool-title">Schema Markup Generator</h1>
+    <p class="tool-description">Pick a content type, fill in the fields, and get a JSON-LD <code>&lt;script&gt;</code> block ready to paste into your page's &lt;head&gt;.</p>
+
+    <div class="tool-card">
+      <label for="input-schema-type">Content type</label>
+      <select id="input-schema-type" style="width: 100%; padding: 13px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--color-bg); color: var(--color-text);">
+        <option value="article">Article</option>
+        <option value="product">Product</option>
+        <option value="faq">FAQ Page</option>
+        <option value="localbusiness">Local Business</option>
+      </select>
+
+      <div class="schema-panel" data-panel="article" style="margin-top: 20px;">
+        <label for="article-headline">Headline</label>
+        <input type="text" id="article-headline" placeholder="e.g. 10 Best SEO Tools for Small Businesses" />
+
+        <div style="margin-top: 16px;">
+          <label for="article-description">Description</label>
+          <textarea id="article-description" rows="3" placeholder="A short summary of the article."></textarea>
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="article-image">Image URL</label>
+          <input type="text" id="article-image" placeholder="e.g. https://example.com/images/article.png" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="article-author">Author name</label>
+          <input type="text" id="article-author" placeholder="e.g. Jane Doe" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="article-publisher">Publisher name</label>
+          <input type="text" id="article-publisher" placeholder="e.g. Example Publishing" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="article-date">Date published</label>
+          <input type="date" id="article-date" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="article-url">Page URL</label>
+          <input type="text" id="article-url" placeholder="e.g. https://example.com/blog/post" />
+        </div>
+      </div>
+
+      <div class="schema-panel" data-panel="product" style="margin-top: 20px;">
+        <label for="product-name">Product name</label>
+        <input type="text" id="product-name" placeholder="e.g. Wireless Keyboard" />
+
+        <div style="margin-top: 16px;">
+          <label for="product-description">Description</label>
+          <textarea id="product-description" rows="3" placeholder="A short product description."></textarea>
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="product-image">Image URL</label>
+          <input type="text" id="product-image" placeholder="e.g. https://example.com/images/product.png" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="product-brand">Brand</label>
+          <input type="text" id="product-brand" placeholder="e.g. Example Brand" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="product-sku">SKU <span class="serp-charcount">optional</span></label>
+          <input type="text" id="product-sku" placeholder="e.g. WK-2000" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="product-price">Price</label>
+          <input type="text" id="product-price" placeholder="e.g. 49.99" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="product-currency">Currency</label>
+          <select id="product-currency" style="width: 100%; padding: 13px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--color-bg); color: var(--color-text);">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="CAD">CAD</option>
+            <option value="AUD">AUD</option>
+          </select>
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="product-availability">Availability</label>
+          <select id="product-availability" style="width: 100%; padding: 13px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; background: var(--color-bg); color: var(--color-text);">
+            <option value="InStock">In stock</option>
+            <option value="OutOfStock">Out of stock</option>
+            <option value="PreOrder">Pre-order</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="schema-panel" data-panel="faq" style="margin-top: 20px;">
+        <div id="faq-groups-container"></div>
+        <button type="button" class="btn btn--secondary btn--small" id="btn-add-faq">+ Add question</button>
+      </div>
+
+      <div class="schema-panel" data-panel="localbusiness" style="margin-top: 20px;">
+        <label for="lb-name">Business name</label>
+        <input type="text" id="lb-name" placeholder="e.g. Example Coffee Shop" />
+
+        <div style="margin-top: 16px;">
+          <label for="lb-description">Description</label>
+          <textarea id="lb-description" rows="3" placeholder="A short description of the business."></textarea>
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-image">Image URL</label>
+          <input type="text" id="lb-image" placeholder="e.g. https://example.com/images/storefront.png" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-url">Website URL</label>
+          <input type="text" id="lb-url" placeholder="e.g. https://example.com" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-phone">Phone</label>
+          <input type="text" id="lb-phone" placeholder="e.g. +1-555-010-1234" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-street">Street address</label>
+          <input type="text" id="lb-street" placeholder="e.g. 123 Main St" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-city">City</label>
+          <input type="text" id="lb-city" placeholder="e.g. Springfield" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-region">State / region</label>
+          <input type="text" id="lb-region" placeholder="e.g. IL" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-postal">Postal code</label>
+          <input type="text" id="lb-postal" placeholder="e.g. 62704" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-country">Country</label>
+          <input type="text" id="lb-country" placeholder="e.g. US" />
+        </div>
+        <div style="margin-top: 16px;">
+          <label for="lb-pricerange">Price range <span class="serp-charcount">optional</span></label>
+          <input type="text" id="lb-pricerange" placeholder="e.g. $$" />
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-schema">Generated JSON-LD</label>
+        <textarea id="output-schema" readonly rows="14" style="font-family: var(--font-mono); font-size: 0.82rem; background: var(--color-bg); min-height: 300px;"></textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy">Copy code</button>
+          <button type="button" class="btn btn--secondary" id="btn-download">Download JSON</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Schema markup (structured data) is a standardized JSON-LD block placed in a page's <code>&lt;head&gt;</code> that describes what the page is about in a format search engines can parse directly, rather than inferring it from visible text. It doesn't change how a page looks to visitors, but it can unlock richer search results, like star ratings, FAQ dropdowns, or price and availability shown directly in the listing.</p>
+      <h3>Why JSON-LD, and where it goes</h3>
+      <p>JSON-LD is Google's recommended format for structured data since it lives in one self-contained <code>&lt;script type="application/ld+json"&gt;</code> block, separate from the page's visible HTML. Paste the generated block anywhere inside <code>&lt;head&gt;</code> (or <code>&lt;body&gt;</code>, both work), then validate it with Google's Rich Results Test before publishing.</p>
+      <h3>Picking the right type</h3>
+      <p>Use <strong>Article</strong> for blog posts and news content, <strong>Product</strong> for anything with a price and availability, <strong>FAQ Page</strong> for a list of questions and answers, and <strong>Local Business</strong> for a business with a physical address. Only mark up content that's actually visible on the page, structured data describing content the visitor can't see is against search engines' guidelines and can lead to a manual penalty.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/schema-markup-generator.js"></script>
+</body>
+</html>

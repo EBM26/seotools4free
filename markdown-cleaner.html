@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown to Plain Text Converter — Free LLM Prompt Cleaner</title>
+  <meta name="description" content="Strip markdown syntax (headers, bold/italic, links, bullets, code fences) to clean plain text optimized for pasting into an LLM prompt, with a token estimate. Free, no signup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 21 / Text</div>
+    <h1 class="tool-title">Markdown to Plain Text Converter</h1>
+    <p class="tool-description">Paste markdown to strip its formatting syntax down to clean plain text, useful for pasting into an LLM prompt without spending tokens on markup it doesn't need.</p>
+
+    <div class="tool-card">
+      <div class="markdown-layout">
+        <div>
+          <label for="input-markdown">Markdown input</label>
+          <textarea id="input-markdown" rows="16" placeholder="Paste your markdown here, e.g.&#10;&#10;# Heading&#10;This is **bold** and _italic_ text with a [link](https://example.com).&#10;&#10;- Bullet one&#10;- Bullet two&#10;&#10;```&#10;code block&#10;```"></textarea>
+        </div>
+        <div>
+          <label for="output-plaintext">Plain text output</label>
+          <textarea id="output-plaintext" readonly rows="16" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+        </div>
+      </div>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-input-tokens">0</div>
+          <div class="stat__label">Input tokens (est.)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-output-tokens">0</div>
+          <div class="stat__label">Output tokens (est.)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-tokens-saved">0</div>
+          <div class="stat__label">Tokens saved</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-percent-saved">0%</div>
+          <div class="stat__label">Reduction</div>
+        </div>
+      </div>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy plain text</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Markdown formatting (headers, bold/italic markers, link brackets, bullet symbols, code fences) is meant for rendering, not for meaning. When you paste markdown-heavy content into an LLM prompt, that syntax still costs tokens without adding information the model needs, this strips it down to the words that actually matter.</p>
+      <h3>What gets stripped</h3>
+      <p>Headers lose their leading <code>#</code> symbols, <strong>bold</strong> and <em>italic</em> markers (<code>**</code>, <code>__</code>, <code>*</code>, <code>_</code>) are removed while keeping the wrapped text, links and images keep just their visible text or alt text and drop the URL, bullet markers (<code>-</code>, <code>*</code>, <code>+</code>) are removed from list items, and code fence lines (<code>```</code>) are removed while keeping the code itself as plain text.</p>
+      <h3>This is a heuristic cleaner, not a markdown parser</h3>
+      <p>It uses pattern matching, not a full markdown AST parser, so unusual or deeply nested formatting (tables, nested blockquotes, reference-style link definitions) may not clean up perfectly, and something like a variable named <code>snake_case_name</code> could occasionally get treated as italic markup. Always glance over the output before pasting it somewhere that matters.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/markdown-cleaner.js"></script>
+</body>
+</html>

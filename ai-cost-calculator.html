@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI API Cost Calculator — Free Token Pricing Estimator</title>
+  <meta name="description" content="Estimate the cost of an AI API call from input and output token counts and your provider's per-token pricing. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 17 / AI</div>
+    <h1 class="tool-title">AI API Cost Calculator</h1>
+    <p class="tool-description">Enter token counts and your provider's per-token pricing to estimate the cost of a request, or of many requests at scale.</p>
+
+    <div class="tool-card">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+          <label for="input-tokens-in">Input tokens per request</label>
+          <input type="number" id="input-tokens-in" value="1000" min="0" />
+        </div>
+        <div>
+          <label for="input-tokens-out">Output tokens per request</label>
+          <input type="number" id="input-tokens-out" value="500" min="0" />
+        </div>
+        <div>
+          <label for="input-price-in">Price per 1M input tokens ($)</label>
+          <input type="number" id="input-price-in" value="3.00" min="0" step="0.01" />
+        </div>
+        <div>
+          <label for="input-price-out">Price per 1M output tokens ($)</label>
+          <input type="number" id="input-price-out" value="15.00" min="0" step="0.01" />
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; max-width: 240px;">
+        <label for="input-requests">Number of requests</label>
+        <input type="number" id="input-requests" value="1" min="1" step="1" />
+      </div>
+      <p class="field-hint">The example prices above are placeholders, not a real quote. Replace them with your provider's current per-token rate, prices vary by model and change often.</p>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-cost-per-request">$0.00</div>
+          <div class="stat__label">Cost per request</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-input-cost">$0.00</div>
+          <div class="stat__label">Input cost (total)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-output-cost">$0.00</div>
+          <div class="stat__label">Output cost (total)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-total-cost">$0.00</div>
+          <div class="stat__label">Total cost</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Most AI providers price API usage per token, and typically charge a different rate for input tokens (the prompt you send) versus output tokens (what the model generates), since generating text costs more compute than reading it. This multiplies your token counts by your own entered rates to estimate cost per request and at whatever scale you're planning for.</p>
+      <h3>Where to get accurate token counts and prices</h3>
+      <p>Use the <a href="prompt-token-counter.html">AI Prompt Token Counter</a> to estimate token counts for actual prompt text. For pricing, always check your provider's current pricing page directly rather than relying on a cached number, since rates change between model versions and sometimes without a version change at all.</p>
+      <h3>What this doesn't account for</h3>
+      <p>This is a straight per-token calculation. It doesn't include volume discounts, prompt caching discounts, batch-processing discounts, minimum monthly fees, or free-tier credits, all of which can meaningfully change your real cost depending on the provider and how you're using the API.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/ai-cost-calculator.js"></script>
+</body>
+</html>

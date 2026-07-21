@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Contrast Checker — Free WCAG Contrast Ratio Tool</title>
+  <meta name="description" content="Check the contrast ratio between text and background colors against WCAG AA and AAA accessibility guidelines. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 13 / Design</div>
+    <h1 class="tool-title">Color Contrast Checker</h1>
+    <p class="tool-description">Enter a text color and background color to check their contrast ratio against WCAG accessibility guidelines.</p>
+
+    <div class="tool-card">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+          <label for="input-foreground">Text color</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="color" id="input-foreground-picker" value="#14171C" style="width: 52px; padding: 4px; height: 46px;" />
+            <input type="text" id="input-foreground" value="#14171C" />
+          </div>
+        </div>
+        <div>
+          <label for="input-background">Background color</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="color" id="input-background-picker" value="#FAFAF8" style="width: 52px; padding: 4px; height: 46px;" />
+            <input type="text" id="input-background" value="#FAFAF8" />
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn--secondary btn--small" id="btn-swap">Swap colors</button>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-ratio">1.00:1</div>
+          <div class="stat__label">Contrast ratio</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="badge-aa-normal">—</div>
+          <div class="stat__label">AA, normal text (4.5:1)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="badge-aaa-normal">—</div>
+          <div class="stat__label">AAA, normal text (7:1)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="badge-aa-large">—</div>
+          <div class="stat__label">AA, large text (3:1)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="badge-aaa-large">—</div>
+          <div class="stat__label">AAA, large text (4.5:1)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card">
+      <label>Preview</label>
+      <div id="preview-box" style="border: 1px solid var(--color-border); border-radius: var(--radius); padding: 28px;">
+        <p id="preview-large" style="margin: 0 0 10px; font-family: var(--font-display); font-weight: 600; font-size: 1.6rem;">Large text sample (24px+)</p>
+        <p id="preview-normal" style="margin: 0; font-family: var(--font-body); font-size: 1rem;">Normal text sample, this is roughly what body copy looks like at this contrast.</p>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Contrast ratio measures how much a text color and its background color differ in relative brightness, on a scale from 1:1 (identical, invisible) to 21:1 (pure black on pure white). The Web Content Accessibility Guidelines (WCAG) set minimum ratios so text stays readable for people with low vision or color vision deficiencies, and in bright or glare-heavy viewing conditions for everyone else.</p>
+      <h3>AA vs. AAA, normal vs. large text</h3>
+      <p>AA is the standard most sites aim for; AAA is a stricter, "enhanced" level. Large text (roughly 24px and up, or 19px+ bold) gets a lower required ratio than normal body text, since bigger letterforms stay legible at lower contrast. This tool checks your colors against all four thresholds at once: AA normal, AAA normal, AA large, AAA large.</p>
+      <h3>What this doesn't check</h3>
+      <p>This only evaluates solid text-on-solid-background contrast. It doesn't check contrast against images or gradients behind text, non-text UI elements like icons and form borders (which WCAG scores separately, at a 3:1 minimum), or color as the sole means of conveying information, which is a separate accessibility concern from contrast.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/color-contrast-checker.js"></script>
+</body>
+</html>
