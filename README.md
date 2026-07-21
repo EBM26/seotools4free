@@ -37,8 +37,13 @@ indexable/SEO-friendly.
    the one tool on the site that needs an internet connection to load a
    library; everything else is fully self-contained).
 2. Word Counter — done, see `word-counter.html`
-3. Campaign URL Builder / UTM Builder
-4. Meta Tag Generator
+3. Campaign URL Builder / UTM Builder — done, see `utm-builder.html`.
+   Required fields (URL, source, medium, name) plus optional term/content,
+   builds a live UTM query string, copy-to-clipboard, reset.
+4. Meta Tag Generator — done, see `meta-tag-generator.html`. Generates
+   title, meta description, canonical link, Open Graph, and Twitter Card
+   tags from one shared set of fields (title/description/image reused
+   across OG and Twitter). Copy-to-clipboard, reset.
 5. Slug Generator
 6. Robots.txt Generator
 7. Open Graph Preview Tool

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meta Tag Generator — Free SEO & Open Graph Tag Builder</title>
+  <meta name="description" content="Generate title, meta description, canonical, Open Graph, and Twitter Card tags ready to paste into your page's head. Free, instant, no signup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 04 / SEO</div>
+    <h1 class="tool-title">Meta Tag Generator</h1>
+    <p class="tool-description">Fill in your page details to generate title, meta description, canonical, Open Graph, and Twitter Card tags ready to paste into your page's &lt;head&gt;.</p>
+
+    <div class="tool-card">
+      <label for="input-title">Page title</label>
+      <input type="text" id="input-title" placeholder="e.g. Word Counter — Free Online Character and Word Count Tool" />
+      <p class="field-hint">Shows in the browser tab and as the link title in search results.</p>
+
+      <div style="margin-top: 20px;">
+        <label for="input-description">Meta description</label>
+        <textarea id="input-description" placeholder="e.g. Count words, characters, and reading time instantly. Free, no signup required."></textarea>
+        <p class="field-hint">Shows below the title in search results. Aim for under 160 characters.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-canonical">Canonical URL</label>
+        <input type="text" id="input-canonical" placeholder="e.g. https://example.com/word-counter" />
+        <p class="field-hint">Tells search engines the preferred URL for this content, prevents duplicate-content issues.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-image">Social share image URL</label>
+        <input type="text" id="input-image" placeholder="e.g. https://example.com/images/share.png" />
+        <p class="field-hint">Used for both Open Graph and Twitter Card previews. Recommended: 1200×630px.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-sitename">Site name</label>
+        <input type="text" id="input-sitename" placeholder="e.g. YourToolsSite" />
+        <p class="field-hint">Shows next to the preview on some platforms (e.g. Facebook).</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-twitter-handle">Twitter / X handle <span class="serp-charcount">optional</span></label>
+        <input type="text" id="input-twitter-handle" placeholder="e.g. @yourhandle" />
+        <p class="field-hint">Attributes the card to a Twitter/X account, if you have one.</p>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-tags">Generated tags</label>
+        <textarea id="output-tags" readonly rows="14" style="font-family: var(--font-mono); font-size: 0.82rem; background: var(--color-bg); min-height: 320px;"></textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy-tags">Copy tags</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/meta-tag-generator.js"></script>
+</body>
+</html>

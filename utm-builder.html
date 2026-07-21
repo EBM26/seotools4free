@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign URL Builder — Free UTM Link Generator</title>
+  <meta name="description" content="Build UTM-tagged campaign URLs for Google Analytics and other tracking tools. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">Tool 03 / Marketing</div>
+    <h1 class="tool-title">Campaign URL Builder</h1>
+    <p class="tool-description">Fill out all fields marked with an asterisk (*), and the campaign URL will be generated for you.</p>
+
+    <div class="tool-card">
+      <label for="input-url">Website URL *</label>
+      <input type="text" id="input-url" placeholder="e.g. https://example.com/landing-page" />
+      <p class="field-hint">The full destination URL, e.g. <strong>https://www.example.com</strong></p>
+
+      <div style="margin-top: 20px;">
+        <label for="input-id">Campaign ID</label>
+        <input type="text" id="input-id" placeholder="e.g. 3" />
+        <p class="field-hint">The ads campaign id.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-source">Campaign source *</label>
+        <input type="text" id="input-source" placeholder="e.g. newsletter, google, facebook" />
+        <p class="field-hint">The referrer, e.g. <strong>google</strong>, <strong>newsletter</strong></p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-medium">Campaign medium *</label>
+        <input type="text" id="input-medium" placeholder="e.g. email, cpc, social" />
+        <p class="field-hint">Marketing medium, e.g. <strong>cpc</strong>, <strong>banner</strong>, <strong>email</strong></p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-name">Campaign name *</label>
+        <input type="text" id="input-name" placeholder="e.g. summer_sale, product_launch" />
+        <p class="field-hint">Product, promo code, or slogan, e.g. <strong>spring_sale</strong>. One of campaign name or campaign ID is required.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-term">Campaign term</label>
+        <input type="text" id="input-term" placeholder="e.g. running+shoes" />
+        <p class="field-hint">Identifies the paid search keywords.</p>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <label for="input-content">Campaign content</label>
+        <input type="text" id="input-content" placeholder="e.g. logolink, textlink" />
+        <p class="field-hint">Used to differentiate similar ads or links.</p>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-url">Generated URL</label>
+        <textarea id="output-url" readonly rows="3" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);">Fill in the required fields above to generate your URL.</textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy-url">Copy URL</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+
+    <div class="tool-card" style="margin-top: 32px;">
+      <label>Parameter reference</label>
+      <table class="utm-reference">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Required</th>
+            <th>Example</th>
+            <th>What it's for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Campaign ID</strong><br /><code>utm_id</code></td>
+            <td>No*</td>
+            <td><code>3</code></td>
+            <td>Identifies which specific ad campaign a visit came from.</td>
+          </tr>
+          <tr>
+            <td><strong>Campaign Source</strong><br /><code>utm_source</code></td>
+            <td>Yes</td>
+            <td><code>google</code></td>
+            <td>Where the traffic is coming from, a search engine, a newsletter, a specific site.</td>
+          </tr>
+          <tr>
+            <td><strong>Campaign Medium</strong><br /><code>utm_medium</code></td>
+            <td>Yes</td>
+            <td><code>cpc</code></td>
+            <td>The channel type carrying the link, like paid search, email, or social.</td>
+          </tr>
+          <tr>
+            <td><strong>Campaign Name</strong><br /><code>utm_campaign</code></td>
+            <td>No*</td>
+            <td><code>spring_sale</code></td>
+            <td>Labels which specific promotion or push this link belongs to.</td>
+          </tr>
+          <tr>
+            <td><strong>Campaign Term</strong><br /><code>utm_term</code></td>
+            <td>No</td>
+            <td><code>running+shoes</code></td>
+            <td>Records the paid search keyword that triggered the ad.</td>
+          </tr>
+          <tr>
+            <td><strong>Campaign Content</strong><br /><code>utm_content</code></td>
+            <td>No</td>
+            <td><code>logolink</code></td>
+            <td>Tells apart multiple links pointing at the same URL, useful for A/B testing ad creative or placement.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="field-hint" style="margin-top: 12px;">*One of Campaign Name or Campaign ID is required.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/utm-builder.js"></script>
+</body>
+</html>
