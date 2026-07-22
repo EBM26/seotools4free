@@ -466,6 +466,7 @@ main {
 
 .serp-toggle {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
 }
@@ -480,6 +481,7 @@ main {
   background: var(--color-bg);
   color: var(--color-text-muted);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .serp-toggle__btn.is-active {
@@ -681,11 +683,25 @@ main {
   margin-bottom: 0;
 }
 
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 14px -28px 0;
+  padding: 0 28px;
+}
+
 .utm-reference {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
-  margin-top: 14px;
   font-size: 0.87rem;
+}
+
+@media (max-width: 700px) {
+  .table-scroll {
+    margin: 14px -20px 0;
+    padding: 0 20px;
+  }
 }
 
 .utm-reference th {
