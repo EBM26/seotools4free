@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Phrase Checker — Spot Overused AI Writing Patterns</title>
+  <meta name="description" content="Paste text to highlight words, stock phrases, and structural patterns that show up disproportionately often in AI-generated writing, so you can revise toward more natural prose. Free, no signup." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">AI</div>
+    <h1 class="tool-title">AI Phrase Checker</h1>
+    <p class="tool-description">Paste text to highlight vocabulary, stock phrases, and sentence structures that turn up disproportionately often in AI-generated writing, an editing aid for more natural, varied prose, not an AI detector.</p>
+
+    <div class="tool-card">
+      <div class="markdown-layout">
+        <div>
+          <label for="input-text">Text to check</label>
+          <textarea id="input-text" rows="14" placeholder="Paste a draft here, a blog post, an email, marketing copy... to see which words and patterns read as AI-flavored."></textarea>
+        </div>
+        <div>
+          <label for="preview-text">Highlighted view</label>
+          <div id="preview-text" class="phrase-preview" data-placeholder="Highlighted text will appear here as you type or paste..."></div>
+          <div class="phrase-legend">
+            <span class="phrase-legend__item"><span class="phrase-legend__swatch phrase-legend__swatch--vocabulary"></span>Vocabulary</span>
+            <span class="phrase-legend__item"><span class="phrase-legend__swatch phrase-legend__swatch--stock"></span>Stock phrases</span>
+            <span class="phrase-legend__item"><span class="phrase-legend__swatch phrase-legend__swatch--structural"></span>Structural patterns</span>
+          </div>
+          <p class="field-hint">Hover or tap a highlighted term to see why it's flagged.</p>
+        </div>
+      </div>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-total">0</div>
+          <div class="stat__label">Flagged terms</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-density">0.0</div>
+          <div class="stat__label">Per 100 words</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-em-dash">0</div>
+          <div class="stat__label">Em dashes</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-emoji">0</div>
+          <div class="stat__label">Emoji</div>
+        </div>
+      </div>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy flagged terms</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card">
+      <label>Breakdown by category</label>
+      <div class="table-scroll">
+        <table class="utm-reference">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody id="breakdown-rows">
+          <tr><td>Vocabulary</td><td id="count-vocabulary">0</td></tr>
+          <tr><td>Stock phrases</td><td id="count-stock">0</td></tr>
+          <tr><td>Structural patterns</td><td id="count-structural">0</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>This is not an AI-content detector. Telling whether a specific piece of text was written by a person or a model is unreliable even with a real detection model behind it, and this tool doesn't try. Instead, it's an editing aid: it flags individual words, stock phrases, and sentence structures that show up more often in AI-generated writing than in typical human prose, so you can look at them and decide, sentence by sentence, whether they're actually the best word for the job or just a reflex.</p>
+      <h3>Why this vocabulary keeps showing up</h3>
+      <p>Language models are trained to predict a statistically likely next word, which nudges output toward safe, high-frequency phrasing: words like "delve," "robust," or "tapestry," and transitions like "in today's fast-paced world" score well across a huge range of prompts, so they get reused constantly. That's a property of how the text was generated, not a sign the writing is bad or that a model is incapable of precise, specific prose, a well-prompted and edited model can avoid every pattern here.</p>
+      <h3>The goal is better writing, not gaming a detector</h3>
+      <p>Every flag here is a prompt to reconsider a word choice or sentence shape, not a verdict to erase. Human writers use plenty of these words too, and removing every hit mechanically can leave prose that reads stranger than the original. Use the highlights to find spots where a more specific, plainer, or more varied phrasing would simply read better, for a reader, not for whatever heuristic produced this scan.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/ai-phrase-checker.js"></script>
+</body>
+</html>

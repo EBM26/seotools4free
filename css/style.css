@@ -1016,6 +1016,116 @@ main {
   color: var(--color-text-muted);
 }
 
+.phrase-preview {
+  width: 100%;
+  min-height: 170px;
+  padding: 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
+
+.phrase-preview:empty::before {
+  content: attr(data-placeholder);
+  color: var(--color-text-muted);
+}
+
+.phrase-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.phrase-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phrase-legend__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.phrase-legend__swatch--vocabulary {
+  background: var(--color-accent);
+}
+
+.phrase-legend__swatch--stock {
+  background: var(--coral-400);
+}
+
+.phrase-legend__swatch--structural {
+  background: var(--color-warn);
+}
+
+.pc-mark {
+  border-radius: 3px;
+  padding: 0 2px;
+  cursor: help;
+}
+
+.pc-mark:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+/* Positioned in JS (fixed, off the normal flow) rather than as a ::after on
+   the mark itself, since .phrase-preview scrolls (overflow-y: auto) and would
+   otherwise clip the popup for any mark near its edges. */
+.pc-tooltip {
+  position: fixed;
+  display: none;
+  max-width: 220px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  background: var(--neutral-900);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: left;
+  z-index: 1000;
+  box-shadow: var(--shadow-400);
+  pointer-events: none;
+}
+
+.pc-tooltip.is-visible {
+  display: block;
+}
+
+.pc-mark--vocabulary {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-hover);
+  font-weight: 600;
+}
+
+.pc-mark--stock {
+  background: rgba(255, 112, 67, 0.18);
+  color: var(--coral-700);
+  font-weight: 600;
+}
+
+.pc-mark--structural {
+  background: rgba(181, 137, 0, 0.16);
+  color: var(--color-warn);
+  font-weight: 600;
+}
+
 .report-item {
   border-left: 3px solid var(--color-accent);
   background: var(--color-accent-soft);

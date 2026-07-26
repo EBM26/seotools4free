@@ -289,6 +289,33 @@ Generator were added outside the catalog entirely, so catalog items
     full tag set belongs on every page in the group, including a
     self-referencing link back to that page, not just on one "main"
     version — a common real-world hreflang mistake.
+27. AI Phrase Checker — done, see `ai-phrase-checker.html` (site item 24).
+    Not part of the original numbered catalog, requested directly.
+    Deliberately not an AI-content detector (identifying whether text was
+    AI-written is unreliable even with a real model behind it) — an
+    editing aid instead: paste text into the left pane of a
+    `.markdown-layout` split, a read-only right pane (`.phrase-preview`,
+    `contenteditable`-free `<mark>`-wrapped rendering, chosen over a
+    textarea+overlay since a plain div sidesteps scroll/font-metric sync
+    issues) highlights matched vocabulary, stock phrases, and structural
+    patterns live (debounced ~250ms on input). Matching runs three
+    categories: a curated overused-AI-vocabulary/phrase list (whole-word,
+    case-insensitive, `"actually"` only flagged as a sentence-opening
+    filler), literal stock transitions (`"in today's fast-paced world"`,
+    `"it's worth noting"`, etc.), and regex-based structural patterns
+    ("not only...but also", rule-of-three comma-adjective lists, vague
+    "studies show"-style attribution with no named source following,
+    "from X to Y" false-range phrasing, dangling "-ing" clauses after a
+    comma). Overlapping matches resolve to the longest, non-overlapping
+    span. Stats panel reports total flagged terms and a "per 100 words"
+    density framed strictly as descriptive, never as an AI/human verdict,
+    plus a category breakdown table and separate raw counts for em dash
+    and emoji usage (frequency signals, not inline-highlighted). Copy
+    button copies the flagged-terms list grouped by category with counts,
+    reset clears everything. Explainer covers what it doesn't claim, a
+    brief and accurate note on why this vocabulary is statistically
+    "safe" language for a model to produce (not that AI can't write well),
+    and that the goal is more natural prose, not gaming a detector.
 
 ## Adding a new tool
 
