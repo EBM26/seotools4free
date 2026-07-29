@@ -191,6 +191,7 @@ main {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 2.3rem;
+  line-height: normal;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
 }

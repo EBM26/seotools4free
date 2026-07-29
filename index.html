@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free SEO & Dev Tools</title>
-  <meta name="description" content="23 free, fast, single-purpose SEO, dev, and AI tools. No signup, no upsells." />
+  <meta name="description" content="29 free, fast, single-purpose SEO, dev, and AI tools. No signup, no upsells." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -19,10 +19,6 @@
   <main class="home-max">
 
     <section class="home-hero">
-      <div class="home-badge">
-        <span class="home-badge__label">23 free tools</span>
-        <span class="home-badge__pill">No signup</span>
-      </div>
       <h1 class="home-hero__title">The small SEO &amp; dev tools you actually reach for.</h1>
       <p class="home-hero__subtitle">Fast, single-purpose, and genuinely free. No accounts, no upsells, no cookie wall — just open one and get on with your day.</p>
 
@@ -30,18 +26,137 @@
         <span class="home-search__icon">
           <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="13.0667" cy="13.0667" r="9.06667" stroke="currentColor" stroke-width="1.6"></circle><path d="M26.6666 26.6667L22.1333 22.1334" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
         </span>
-        <input type="text" id="tool-search" placeholder="Search 23 tools — try &ldquo;schema&rdquo;, &ldquo;tokens&rdquo;, &ldquo;contrast&rdquo;&hellip;" aria-label="Search tools" />
+        <input type="text" id="tool-search" placeholder="Search 29 tools — try &ldquo;schema&rdquo;, &ldquo;tokens&rdquo;, &ldquo;contrast&rdquo;&hellip;" aria-label="Search tools" />
       </div>
 
       <div class="home-pills">
         <button type="button" class="home-pill is-active" data-cat="all" aria-pressed="true">All tools</button>
+        <button type="button" class="home-pill" data-cat="ai" aria-pressed="false">AI &amp; LLM</button>
         <button type="button" class="home-pill" data-cat="seo" aria-pressed="false">SEO</button>
         <button type="button" class="home-pill" data-cat="dev" aria-pressed="false">Dev</button>
-        <button type="button" class="home-pill" data-cat="ai" aria-pressed="false">AI &amp; LLM</button>
       </div>
     </section>
 
     <section id="tools" class="home-tools">
+
+      <div class="home-section" data-cat="ai">
+        <div class="home-section__head">
+          <span class="home-section__icon home-section__icon--ai">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M13.3335 18.6667L9.3335 22.6667" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M13.3333 13.3333L8 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="22.6667" cy="22.6667" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="26.6667" cy="16" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><path d="M24.6668 16H19.3335" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M18.6665 18.6667L21.3332 21.3334" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="25.3335" cy="6.66669" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M22.6665 9.33331L18.6665 13.3333" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="6.66667" cy="6.66667" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="6.6665" cy="25.3333" r="3.5" stroke="currentColor" stroke-width="1.5"></circle></svg>
+          </span>
+          <div>
+            <div class="home-section__eyebrow">Prompts &amp; models</div>
+            <h2 class="home-section__title">AI &amp; LLM tools</h2>
+          </div>
+        </div>
+        <div class="home-grid">
+
+          <a href="prompt-token-counter.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI Prompt Token Counter</div>
+            <div class="home-card__desc">Estimate tokens and how much of the context window you're using.</div>
+          </a>
+
+          <a href="prompt-template-builder.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Prompt Template Builder</div>
+            <div class="home-card__desc">Save reusable prompts with fill-in-the-blank variables.</div>
+          </a>
+
+          <a href="ai-cost-calculator.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI API Cost Calculator</div>
+            <div class="home-card__desc">Turn token counts and provider pricing into a real dollar figure.</div>
+          </a>
+
+          <a href="prompt-injection-checker.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Prompt Injection Checker</div>
+            <div class="home-card__desc">Scan text for sneaky injection phrasing before it hits your model.</div>
+          </a>
+
+          <a href="llms-txt-generator.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">llms.txt Generator</div>
+            <div class="home-card__desc">Generate an llms.txt with a summary and grouped key links.</div>
+          </a>
+
+          <a href="ai-content-detector.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI Content Detector</div>
+            <div class="home-card__desc">A quick 0–100 read on how AI-like a piece of writing feels.</div>
+          </a>
+
+          <a href="system-prompt-analyzer.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">System Prompt Analyzer</div>
+            <div class="home-card__desc">Check a system prompt for length, complexity, and contradictions.</div>
+          </a>
+
+          <a href="ai-phrase-checker.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">AI Phrase Checker</div>
+            <div class="home-card__desc">Highlight overused AI vocabulary and phrasing so you can edit it out.</div>
+          </a>
+
+          <a href="prompt-compressor.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Prompt Compressor</div>
+            <div class="home-card__desc">Trim filler words and wordy phrasing from a prompt without losing its meaning.</div>
+          </a>
+
+          <a href="few-shot-prompting-tool.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Few-Shot Prompting Tool</div>
+            <div class="home-card__desc">Format input/output example pairs consistently for few-shot prompts.</div>
+          </a>
+
+          <a href="delimeter-tool.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Delimiter Tool</div>
+            <div class="home-card__desc">Wrap user input in a safe delimiter as a defense against prompt injection.</div>
+          </a>
+
+          <a href="prompt-template-library.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Prompt Template Library</div>
+            <div class="home-card__desc">Curated, copy-paste starter system prompts for common use cases.</div>
+          </a>
+
+          <a href="chain-of-thought-wrapper.html" class="home-card home-card--ai">
+            <div class="home-card__top">
+              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
+            </div>
+            <div class="home-card__name">Chain-of-Thought Prompt Wrapper</div>
+            <div class="home-card__desc">Wrap a task description with a step-by-step reasoning structure.</div>
+          </a>
+
+        </div>
+      </div>
 
       <div class="home-section" data-cat="seo">
         <div class="home-section__head">
@@ -201,91 +316,12 @@
         </div>
       </div>
 
-      <div class="home-section" data-cat="ai">
-        <div class="home-section__head">
-          <span class="home-section__icon home-section__icon--ai">
-            <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M13.3335 18.6667L9.3335 22.6667" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M13.3333 13.3333L8 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="22.6667" cy="22.6667" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="26.6667" cy="16" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><path d="M24.6668 16H19.3335" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M18.6665 18.6667L21.3332 21.3334" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="25.3335" cy="6.66669" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M22.6665 9.33331L18.6665 13.3333" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><circle cx="6.66667" cy="6.66667" r="2.16667" stroke="currentColor" stroke-width="1.5"></circle><circle cx="6.6665" cy="25.3333" r="3.5" stroke="currentColor" stroke-width="1.5"></circle></svg>
-          </span>
-          <div>
-            <div class="home-section__eyebrow">Prompts &amp; models</div>
-            <h2 class="home-section__title">AI &amp; LLM tools</h2>
-          </div>
-        </div>
-        <div class="home-grid">
-
-          <a href="prompt-token-counter.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">AI Prompt Token Counter</div>
-            <div class="home-card__desc">Estimate tokens and how much of the context window you're using.</div>
-          </a>
-
-          <a href="prompt-template-builder.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">Prompt Template Builder</div>
-            <div class="home-card__desc">Save reusable prompts with fill-in-the-blank variables.</div>
-          </a>
-
-          <a href="ai-cost-calculator.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">AI API Cost Calculator</div>
-            <div class="home-card__desc">Turn token counts and provider pricing into a real dollar figure.</div>
-          </a>
-
-          <a href="prompt-injection-checker.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">Prompt Injection Checker</div>
-            <div class="home-card__desc">Scan text for sneaky injection phrasing before it hits your model.</div>
-          </a>
-
-          <a href="llms-txt-generator.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">llms.txt Generator</div>
-            <div class="home-card__desc">Generate an llms.txt with a summary and grouped key links.</div>
-          </a>
-
-          <a href="ai-content-detector.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">AI Content Detector</div>
-            <div class="home-card__desc">A quick 0–100 read on how AI-like a piece of writing feels.</div>
-          </a>
-
-          <a href="system-prompt-analyzer.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">System Prompt Analyzer</div>
-            <div class="home-card__desc">Check a system prompt for length, complexity, and contradictions.</div>
-          </a>
-
-          <a href="ai-phrase-checker.html" class="home-card home-card--ai">
-            <div class="home-card__top">
-              <span class="home-card__arrow"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span>
-            </div>
-            <div class="home-card__name">AI Phrase Checker</div>
-            <div class="home-card__desc">Highlight overused AI vocabulary and phrasing so you can edit it out.</div>
-          </a>
-
-        </div>
-      </div>
-
       <div class="home-empty" id="home-empty" hidden>
         <div class="home-empty__icon">
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="13.0667" cy="13.0667" r="9.06667" stroke="currentColor" stroke-width="1.6"></circle><path d="M26.6666 26.6667L22.1333 22.1334" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>
         </div>
         <div class="home-empty__title">No tools match &ldquo;<span class="home-empty__query"></span>&rdquo;</div>
-        <div class="home-empty__hint">Try a shorter word, or clear the search to see all 23.</div>
+        <div class="home-empty__hint">Try a shorter word, or clear the search to see all 29.</div>
       </div>
 
     </section>

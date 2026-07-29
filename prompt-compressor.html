@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Compressor — Free AI Prompt Shortener</title>
+  <meta name="description" content="Shorten a prompt without changing its meaning by trimming filler words and wordy phrases before you send it to a model. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">AI</div>
+    <h1 class="tool-title">Prompt Compressor</h1>
+    <p class="tool-description">Paste a prompt below to trim filler words and wordy phrasing, live, without changing what it actually asks for.</p>
+
+    <div class="tool-card">
+      <label for="input-prompt">Original prompt</label>
+      <textarea id="input-prompt" rows="8" placeholder="e.g. Could you please, if you could, just take a look at the text below and, in order to make sure the tone stays professional, kindly rewrite it?"></textarea>
+
+      <div style="margin-top: 20px;">
+        <label for="output-compressed">Compressed prompt</label>
+        <textarea id="output-compressed" readonly rows="8" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+      </div>
+
+      <div class="tool-output">
+        <div class="stat">
+          <div class="stat__value" id="stat-original-chars">0</div>
+          <div class="stat__label">Original characters</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-compressed-chars">0</div>
+          <div class="stat__label">Compressed characters</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-reduction">0%</div>
+          <div class="stat__label">Reduction</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-original-tokens">0</div>
+          <div class="stat__label">Original tokens (est.)</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-compressed-tokens">0</div>
+          <div class="stat__label">Compressed tokens (est.)</div>
+        </div>
+      </div>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy compressed prompt</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Every extra word in a prompt is extra tokens, and extra tokens mean more cost and more time waiting on a response. A lot of that padding, politeness filler, wordy phrasing habits carried over from writing emails, redundant qualifiers, doesn't carry any of the actual instruction. Trimming it shortens the prompt without changing what you're asking the model to do.</p>
+      <h3>How the compression works</h3>
+      <p>This runs a curated list of pattern replacements, not an AI model: dropping pure filler ("please", "kindly", "just to let you know"), swapping wordy constructions for shorter equivalents ("due to the fact that" becomes "because"), and removing qualifiers that are almost always filler ("very", "really", "basically"). Because it's simple pattern matching, it won't catch every possible redundancy, and it deliberately leaves anything that could be load-bearing alone rather than guessing.</p>
+      <h3>Always review the output</h3>
+      <p>Automated trimming can occasionally shift tone or drop a word that mattered more than it looked like it did. Read the compressed version before you send it anywhere that matters, this is meant to save you a first editing pass, not replace a final read-through.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/prompt-compressor.js"></script>
+</body>
+</html>

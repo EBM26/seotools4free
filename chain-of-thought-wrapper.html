@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chain-of-Thought Prompt Wrapper — Free Reasoning Prompt Builder</title>
+  <meta name="description" content="Wrap a plain task description with a step-by-step reasoning structure to improve output quality on hard, judgment-heavy tasks. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">AI</div>
+    <h1 class="tool-title">Chain-of-Thought Prompt Wrapper</h1>
+    <p class="tool-description">Describe the task, pick a reasoning structure, and this wraps it into a prompt that asks the model to reason through the problem before answering.</p>
+
+    <div class="tool-card">
+      <label for="input-task">Task description</label>
+      <textarea id="input-task" rows="5" placeholder="e.g. Determine whether this contract clause is enforceable under California law"></textarea>
+
+      <div style="margin-top: 20px;">
+        <label>Wrapping style</label>
+        <div class="serp-toggle">
+          <button type="button" class="serp-toggle__btn is-active" data-style="step-by-step">Think step by step, then answer</button>
+          <button type="button" class="serp-toggle__btn" data-style="numbered">Numbered reasoning steps</button>
+          <button type="button" class="serp-toggle__btn" data-style="alternatives">Consider alternatives, then decide</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-wrapped">Wrapped prompt</label>
+        <textarea id="output-wrapped" readonly rows="12" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy">Copy wrapped prompt</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Chain-of-thought prompting asks a model to work through its reasoning in steps before committing to a final answer, instead of jumping straight to a conclusion. On multi-step or judgment-heavy tasks, that extra reasoning tends to catch mistakes a straight-to-the-answer response would have missed, the model has room to notice when an early step doesn't hold up.</p>
+      <h3>Three ways to structure the reasoning</h3>
+      <p>"Think step by step" is the loosest version, free-form reasoning followed by a clearly marked final answer. Numbered reasoning steps forces a more explicit, checkable structure. "Consider alternatives, then decide" is best when there's genuinely more than one reasonable answer, it makes the model weigh options instead of anchoring on the first one it considers.</p>
+      <h3>This adds length, and therefore cost</h3>
+      <p>Reasoning steps mean more output tokens, which means more cost and more latency. It's worth it for genuinely hard tasks, ambiguous judgment calls, multi-step calculations, anything where getting it wrong is costly, but it's overkill for simple lookups or single-fact questions where the model wasn't going to make a reasoning error in the first place.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/chain-of-thought-wrapper.js"></script>
+</body>
+</html>

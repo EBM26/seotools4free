@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Few-Shot Prompting Tool — Free Example Formatter for AI Prompts</title>
+  <meta name="description" content="Turn a list of input/output example pairs into consistently formatted few-shot examples for an AI prompt. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">AI</div>
+    <h1 class="tool-title">Few-Shot Prompting Tool</h1>
+    <p class="tool-description">Add a few input/output example pairs and pick a format, this builds the consistently-formatted few-shot block to paste into your prompt.</p>
+
+    <div class="tool-card">
+      <label>Examples</label>
+      <div id="examples-container"></div>
+
+      <button type="button" class="btn btn--secondary btn--small" id="btn-add-example">+ Add another example</button>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="select-format">Output format</label>
+        <select id="select-format">
+          <option value="labeled">Labeled text (Input: / Output:)</option>
+          <option value="numbered">Numbered blocks (Example 1:, Example 2:, ...)</option>
+          <option value="json">JSON array</option>
+        </select>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border);">
+        <label for="output-examples">Generated few-shot block</label>
+        <textarea id="output-examples" readonly rows="12" style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--color-bg);"></textarea>
+        <div class="serp-actions">
+          <button type="button" class="btn" id="btn-copy">Copy</button>
+          <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+        </div>
+        <div class="serp-actions__feedback" id="actions-feedback"></div>
+      </div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Few-shot prompting means showing a model a handful of example input/output pairs instead of, or alongside, describing the task in words. The model infers the pattern from the examples themselves, which often gets you closer to the output shape you actually want than a description alone.</p>
+      <h3>Why consistent formatting matters more than it seems like it should</h3>
+      <p>If your examples are formatted inconsistently, extra whitespace in one, a different label style in another, that inconsistency itself becomes part of the pattern the model learns, and it can show up in the output in ways that are hard to trace back to the cause. Picking one format and sticking to it across every example removes that variable entirely.</p>
+      <h3>A rule of thumb on how many examples to use</h3>
+      <p>Three to five varied examples usually outperforms a long list of similar ones. Similar examples mostly repeat the same signal, while a few genuinely different cases (different lengths, different edge cases, different phrasing) teach the model more about where the boundaries of the pattern actually are.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/few-shot-prompting-tool.js"></script>
+</body>
+</html>
