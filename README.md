@@ -44,7 +44,7 @@ Generator were added outside the catalog entirely, so catalog items
 16-19 shipped as site items 15-18.
 
 **Ship first (static, no backend):**
-1. Google SERP Simulator — done, see `serp-simulator.html`. Full-width page
+1. Google SERP Simulator — done, see `serp-preview-tool.html`. Full-width page
    layout (`.tool-main--wide`, overrides the site's normal 1080px cap).
    Features: pixel-width title/description limits (canvas `measureText`
    against Arial, 600px title / 960px desktop & 680px mobile description),
@@ -81,7 +81,7 @@ Generator were added outside the catalog entirely, so catalog items
    covers User-agent/Disallow/Allow syntax, the Sitemap directive, why
    Crawl-delay is left out (ignored by Google), and why robots.txt is the
    wrong tool for keeping a page out of search results (use noindex instead).
-7. Open Graph Preview Tool — done, see `og-preview-tool.html`. Toggle
+7. Open Graph Preview Tool — done, see `og-image-preview.html`. Toggle
    between Facebook / Twitter (X) / LinkedIn card layouts for the same
    title/description/image/URL input, each with its own layout quirks
    (LinkedIn drops the description, Twitter keeps a white body vs.
@@ -111,7 +111,7 @@ Generator were added outside the catalog entirely, so catalog items
     "Lorem ipsum dolor sit amet..." opening, regenerate button (new
     random text without changing settings), copy-to-clipboard, reset.
 11. CSS Clamp/Fluid Typography Calculator — done, see
-    `css-clamp-calculator.html`. Min/max viewport width + min/max font
+    `css-clamp-generator.html`. Min/max viewport width + min/max font
     size fields plus a root-font-size field for px-to-rem conversion,
     outputs a `font-size: clamp(...)` line. Live preview section with a
     width slider (200-2000px) that recomputes sample-text font size
@@ -122,13 +122,13 @@ Generator were added outside the catalog entirely, so catalog items
     `select` (previously only text/url inputs and textareas were
     covered, so number/date/select fields in earlier tools relied on
     repeated inline styles — new tools should no longer need that).
-12. Readability Score Checker — done, see `readability-checker.html`.
+12. Readability Score Checker — done, see `readability-score-checker.html`.
     Live word/sentence/syllable counts, Flesch Reading Ease (0-100,
     labeled Very easy through Very difficult) and Flesch-Kincaid Grade
     Level, both computed from the same syllable-counting heuristic
     (vowel-group pattern matching, not a pronunciation dictionary), plus
     a reference table mapping score ranges to US grade levels.
-13. Color Contrast Checker — done, see `color-contrast-checker.html`.
+13. Color Contrast Checker — done, see `wcag-contrast-checker.html`.
     Paired hex text input + native color picker for text and background
     colors (kept in sync both directions), swap button, live contrast
     ratio using the standard WCAG relative-luminance formula, and four
@@ -146,19 +146,19 @@ Generator were added outside the catalog entirely, so catalog items
 
 **AI-adjacent, still no backend needed:**
 16. AI Prompt Character/Token Counter — done, see
-    `prompt-token-counter.html` (site item 15). Character/word counts
+    `ai-token-calculator.html` (site item 15). Character/word counts
     plus an estimated token count (4 chars/token heuristic), and a
     context-window usage table across 5 common model families with a
     percent-fill bar per row. Explainer is explicit that this is an
     estimate, not an exact tokenizer count.
-17. Prompt Template Builder — done, see `prompt-template-builder.html`
+17. Prompt Template Builder — done, see `ai-prompt-builder.html`
     (site item 16). Type a template using `{{double curly brace}}`
     placeholders, matching fill-in fields appear automatically (dedup'd
     by name, same name twice fills both spots). Blank fields leave the
     placeholder text visible in the final prompt rather than blanking
     it, so it's obvious what's still unfilled. No localStorage/save
     feature, kept stateless like the rest of the site.
-18. AI Cost Calculator — done, see `ai-cost-calculator.html` (site item
+18. AI Cost Calculator — done, see `ai-api-cost-calculator.html` (site item
     17). Deliberately provider-agnostic: no hardcoded per-model prices,
     since real pricing changes often and a stale hardcoded number would
     be actively misleading. Instead takes input/output token counts,
@@ -208,7 +208,7 @@ Generator were added outside the catalog entirely, so catalog items
     parser — built directly as DOM nodes). Copy, download as
     `llms.txt`, reset. Explainer is upfront that this is an emerging,
     unofficial convention with no guaranteed adoption by AI providers.
-23. AI Content Detector — done, see `ai-content-detector.html` (site
+23. AI Content Detector — done, see `ai-text-detector.html` (site
     item 20). Four independent heuristic signals, each producing its
     own 0-100 sub-score, averaged into an overall score that's then
     displayed as a complementary pair — "Likely AI-written" /
@@ -232,7 +232,7 @@ Generator were added outside the catalog entirely, so catalog items
     site — editing the text after a scan shows a "results are stale"
     note rather than clearing or silently re-running. A `Reset` button
     clears the textarea and results back to the initial empty state.
-24. Markdown to Plain Text Converter — done, see `markdown-cleaner.html`
+24. Markdown to Plain Text Converter — done, see `markdown-to-plain-text.html`
     (site item 21). Side-by-side input/output via `.markdown-layout`
     (new 1fr/1fr grid, collapses to 1 column under 800px — distinct from
     `.serp-layout`'s asymmetric 440px/1fr split, since here both panes
@@ -252,7 +252,7 @@ Generator were added outside the catalog entirely, so catalog items
     like `snake_case_names` can occasionally get mis-treated as italic
     markup, and reference-style link *definitions*, tables, and nested
     blockquotes aren't specifically handled.
-25. System Prompt Analyzer — done, see `system-prompt-analyzer.html`
+25. System Prompt Analyzer — done, see `ai-prompt-analyzer.html`
     (site item 22). Deliberately outputs a readable list of findings
     (`.report-item` cards, info vs. warning styled by a modifier class)
     rather than a single score, per explicit request — a score would
@@ -289,7 +289,7 @@ Generator were added outside the catalog entirely, so catalog items
     full tag set belongs on every page in the group, including a
     self-referencing link back to that page, not just on one "main"
     version — a common real-world hreflang mistake.
-27. AI Phrase Checker — done, see `ai-phrase-checker.html` (site item 24).
+27. AI Phrase Checker — done, see `ai-text-humanizer.html` (site item 24).
     Not part of the original numbered catalog, requested directly.
     Deliberately not an AI-content detector (identifying whether text was
     AI-written is unreliable even with a real model behind it) — an
