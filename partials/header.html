@@ -1,15 +1,114 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a href="index.html" class="site-header__logo">
-      <img src="logo1.png" alt="seotools4free" width="32" height="32" />
-      <span class="site-header__logo-word">seotools<span>4</span>free</span>
+      <img src="logos/logo-mark.svg" alt="seotools4free" />
     </a>
-    <nav class="site-header__nav">
-      <a href="index.html">All tools</a>
-      <a href="https://github.com/EBM26/seotools4free" class="site-header__github">
-        <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><path d="M18.6665 24L26.6665 16L18.6665 8M26.6665 16H6.6665" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
-        GitHub
-      </a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="index.html" class="site-header__link" data-nav-home>Home</a>
+
+      <div class="site-header__dropdown">
+        <button type="button" class="site-header__link site-header__dropdown-toggle" aria-expanded="false">
+          AI &amp; LLM
+          <svg class="site-header__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="site-header__panel site-header__panel--wide">
+          <a href="ai-token-calculator.html">AI Token Calculator</a>
+          <a href="ai-prompt-builder.html">AI Prompt Builder</a>
+          <a href="ai-api-cost-calculator.html">AI API Cost Calculator</a>
+          <a href="prompt-injection-checker.html">Prompt Injection Checker</a>
+          <a href="llms-txt-generator.html">llms.txt Generator</a>
+          <a href="ai-text-detector.html">AI Text Detector</a>
+          <a href="ai-prompt-analyzer.html">AI Prompt Analyzer</a>
+          <a href="ai-text-humanizer.html">AI Text Humanizer</a>
+          <a href="prompt-compressor.html">Prompt Compressor</a>
+          <a href="few-shot-prompting-tool.html">Few-Shot Prompting Tool</a>
+          <a href="delimeter-tool.html">Delimiter Tool</a>
+          <a href="prompt-template-library.html">Prompt Template Library</a>
+          <a href="chain-of-thought-wrapper.html">Chain-of-Thought Prompt Wrapper</a>
+        </div>
+      </div>
+
+      <div class="site-header__dropdown">
+        <button type="button" class="site-header__link site-header__dropdown-toggle" aria-expanded="false">
+          SEO
+          <svg class="site-header__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="site-header__panel site-header__panel--wide">
+          <a href="serp-preview-tool.html">SERP Preview Tool</a>
+          <a href="utm-builder.html">Campaign URL Builder</a>
+          <a href="meta-tag-generator.html">Meta Tag Generator</a>
+          <a href="slug-generator.html">Slug Generator</a>
+          <a href="robots-txt-generator.html">Robots.txt Generator</a>
+          <a href="og-image-preview.html">Open Graph Image Preview</a>
+          <a href="keyword-density-checker.html">Keyword Density Checker</a>
+          <a href="schema-markup-generator.html">Schema Markup Generator</a>
+          <a href="readability-score-checker.html">Readability Score Checker</a>
+          <a href="hreflang-generator.html">Hreflang Tag Generator</a>
+        </div>
+      </div>
+
+      <div class="site-header__dropdown">
+        <button type="button" class="site-header__link site-header__dropdown-toggle" aria-expanded="false">
+          Developer
+          <svg class="site-header__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="site-header__panel">
+          <a href="word-counter.html">Word Counter</a>
+          <a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a>
+          <a href="css-clamp-generator.html">CSS Clamp Generator</a>
+          <a href="wcag-contrast-checker.html">WCAG Contrast Checker</a>
+          <a href="favicon-generator.html">Favicon Generator</a>
+          <a href="markdown-to-plain-text.html">Markdown to Plain Text</a>
+        </div>
+      </div>
     </nav>
+
+    <a href="mailto:eyalb@devonshiredev.com" class="site-header__cta">
+      Contact Us
+      <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><path d="M9.33 22.67L22.67 9.33M22.67 9.33H12M22.67 9.33V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </div>
 </header>
+
+<script>
+  (function () {
+    var header = document.querySelector('.site-header');
+    if (!header) return;
+
+    var homeLink = header.querySelector('[data-nav-home]');
+    if (homeLink) {
+      var path = window.location.pathname;
+      if (path === '/' || /\/index\.html$/.test(path)) {
+        homeLink.classList.add('is-active');
+      }
+    }
+
+    var dropdowns = header.querySelectorAll('.site-header__dropdown');
+
+    function closeAll() {
+      dropdowns.forEach(function (d) {
+        d.classList.remove('is-open');
+        d.querySelector('.site-header__dropdown-toggle').setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    dropdowns.forEach(function (dropdown) {
+      var toggle = dropdown.querySelector('.site-header__dropdown-toggle');
+      toggle.addEventListener('click', function (event) {
+        event.stopPropagation();
+        var isOpen = dropdown.classList.contains('is-open');
+        closeAll();
+        if (!isOpen) {
+          dropdown.classList.add('is-open');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    document.addEventListener('click', closeAll);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeAll();
+    });
+  })();
+</script>
