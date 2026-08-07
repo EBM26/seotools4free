@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seotools4free.com/sitemap.xml
