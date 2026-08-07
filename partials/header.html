@@ -4,7 +4,7 @@
       <img src="logos/logo-mark.svg" alt="seotools4free" />
     </a>
 
-    <nav class="site-header__nav" aria-label="Primary">
+    <nav class="site-header__nav" id="site-header-nav" aria-label="Primary">
       <a href="index.html" class="site-header__link" data-nav-home>Home</a>
 
       <div class="site-header__dropdown">
@@ -64,10 +64,17 @@
       </div>
     </nav>
 
-    <a href="mailto:eyalb@devonshiredev.com" class="site-header__cta">
-      Contact Us
-      <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><path d="M9.33 22.67L22.67 9.33M22.67 9.33H12M22.67 9.33V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+    <div class="site-header__actions">
+      <a href="mailto:eyalb@devonshiredev.com" class="site-header__cta">
+        Contact Us
+        <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><path d="M9.33 22.67L22.67 9.33M22.67 9.33H12M22.67 9.33V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <button type="button" class="site-header__hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-header-nav">
+        <svg class="site-header__hamburger-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <svg class="site-header__close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -84,13 +91,23 @@
       }
     }
 
+    var nav = header.querySelector('.site-header__nav');
+    var hamburger = header.querySelector('.site-header__hamburger');
     var dropdowns = header.querySelectorAll('.site-header__dropdown');
 
-    function closeAll() {
+    function closeDropdowns() {
       dropdowns.forEach(function (d) {
         d.classList.remove('is-open');
         d.querySelector('.site-header__dropdown-toggle').setAttribute('aria-expanded', 'false');
       });
+    }
+
+    function closeMobileMenu() {
+      nav.classList.remove('is-mobile-open');
+      hamburger.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('site-nav-open');
+      closeDropdowns();
     }
 
     dropdowns.forEach(function (dropdown) {
@@ -98,7 +115,7 @@
       toggle.addEventListener('click', function (event) {
         event.stopPropagation();
         var isOpen = dropdown.classList.contains('is-open');
-        closeAll();
+        closeDropdowns();
         if (!isOpen) {
           dropdown.classList.add('is-open');
           toggle.setAttribute('aria-expanded', 'true');
@@ -106,9 +123,27 @@
       });
     });
 
-    document.addEventListener('click', closeAll);
+    hamburger.addEventListener('click', function (event) {
+      event.stopPropagation();
+      if (nav.classList.contains('is-mobile-open')) {
+        closeMobileMenu();
+        return;
+      }
+      nav.classList.add('is-mobile-open');
+      hamburger.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('site-nav-open');
+    });
+
+    document.addEventListener('click', function (event) {
+      closeDropdowns();
+      if (nav.classList.contains('is-mobile-open') && !nav.contains(event.target) && !hamburger.contains(event.target)) {
+        closeMobileMenu();
+      }
+    });
+
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeAll();
+      if (event.key === 'Escape') closeMobileMenu();
     });
   })();
 </script>
