@@ -50,7 +50,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    inject('site-header', 'partials/header.html');
-    inject('site-footer', 'partials/footer.html');
+    inject('site-header', '/partials/header.html');
+    inject('site-footer', '/partials/footer.html');
   });
 })();
