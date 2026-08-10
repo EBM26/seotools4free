@@ -42,7 +42,8 @@
   --color-surface: #FFFFFF;
   --color-border: var(--neutral-400);
   --color-border-strong: var(--neutral-500);
-  --color-text: var(--blue-900);
+  --color-text: #000000;
+  --color-heading: var(--blue-900);
   --color-text-muted: var(--neutral-800);
   --color-accent: var(--blue-700);
   --color-accent-hover: var(--blue-800);
@@ -77,13 +78,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.55;
-  font-size: 15px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -322,6 +327,7 @@ main {
   line-height: normal;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
+  color: var(--color-heading);
 }
 
 .tool-description {
@@ -336,7 +342,7 @@ main {
 .faq-back-link {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-accent);
   text-decoration: none;
@@ -349,7 +355,6 @@ main {
 }
 
 .faq-body p {
-  max-width: 68ch;
   margin: 0 0 20px;
 }
 
@@ -368,7 +373,7 @@ main {
 .faq-nav a {
   max-width: 45%;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-accent);
   text-decoration: none;
@@ -416,7 +421,7 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1rem;
   resize: vertical;
   background: var(--color-bg);
   color: var(--color-text);
@@ -561,7 +566,7 @@ main {
 
 .tool-list__desc {
   color: var(--color-text-muted);
-  font-size: 0.88rem;
+  font-size: 1rem;
 }
 
 .serp-layout {
@@ -607,7 +612,7 @@ main {
   background: rgba(181, 137, 0, 0.12);
   border-left: 3px solid var(--color-warn);
   padding: 10px 14px;
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: #7a5b12;
   margin-top: 8px;
   border-radius: var(--radius);
@@ -635,7 +640,7 @@ main {
 .serp-actions__feedback {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.78rem;
+  font-size: 1rem;
   color: var(--color-accent);
   margin-top: 10px;
   min-height: 1em;
@@ -825,7 +830,7 @@ main {
 }
 
 .field-hint {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   margin: 6px 0 0;
   line-height: 1.4;
@@ -845,6 +850,7 @@ main {
   font-weight: 600;
   font-size: 1.3rem;
   margin: 0 0 14px;
+  color: var(--color-heading);
 }
 
 .tool-explainer h3 {
@@ -852,11 +858,12 @@ main {
   font-weight: 600;
   font-size: 1.05rem;
   margin: 18px 0 6px;
+  color: var(--color-heading);
 }
 
 .tool-explainer p {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 12px;
 }
@@ -876,7 +883,7 @@ main {
   width: 100%;
   min-width: 560px;
   border-collapse: collapse;
-  font-size: 0.87rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 700px) {
@@ -1115,6 +1122,7 @@ main {
   font-weight: 600;
   font-size: 1.5rem;
   margin: 0 0 12px;
+  color: var(--color-heading);
 }
 
 .llms-preview blockquote {
@@ -1136,6 +1144,7 @@ main {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 20px 0 8px;
+  color: var(--color-heading);
 }
 
 .llms-preview ul {
@@ -1154,7 +1163,7 @@ main {
 
 .llms-preview__empty {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .favicon-grid {
@@ -1166,7 +1175,7 @@ main {
 
 .favicon-grid__empty {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .favicon-swatch {
@@ -1207,7 +1216,7 @@ main {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.55;
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -1334,7 +1343,7 @@ main {
 }
 
 .report-item__detail {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--color-text-muted);
   line-height: 1.5;
 }
