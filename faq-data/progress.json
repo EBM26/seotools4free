@@ -1,0 +1,377 @@
+[
+  {
+    "slug": "what-is-schema-markup",
+    "question": "what is schema markup",
+    "published": true
+  },
+  {
+    "slug": "how-do-i-implement-schema-markup-for-aeo",
+    "question": "how do i implement schema markup for aeo",
+    "published": true
+  },
+  {
+    "slug": "how-to-add-schema-markup-in-wordpress",
+    "question": "how to add schema markup in wordpress",
+    "published": true
+  },
+  {
+    "slug": "what-is-the-recommended-format-for-implementing-schema-markup",
+    "question": "what is the recommended format for implementing schema markup",
+    "published": true
+  },
+  {
+    "slug": "is-schema-markup-important",
+    "question": "is schema markup important",
+    "published": true
+  },
+  {
+    "slug": "how-to-add-schema-markup-to-html",
+    "question": "how to add schema markup to html",
+    "published": true
+  },
+  {
+    "slug": "how-to-add-schema-markup-to-wordpress-without-plugin",
+    "question": "how to add schema markup to wordpress without plugin",
+    "published": true
+  },
+  {
+    "slug": "which-platforms-offer-local-seo-and-schema-markup-optimization",
+    "question": "which platforms offer local seo and schema markup optimization",
+    "published": true
+  },
+  {
+    "slug": "how-many-tokens-is-100-words",
+    "question": "how many tokens is 100 words",
+    "published": true
+  },
+  {
+    "slug": "how-many-words-is-1-million-tokens",
+    "question": "how many words is 1 million tokens",
+    "published": true
+  },
+  {
+    "slug": "what-is-a-token-in-chatgpt",
+    "question": "what is a token in chatgpt",
+    "published": false
+  },
+  {
+    "slug": "how-are-special-chat-tokens-trained-in-llm",
+    "question": "how are special chat tokens trained in llm",
+    "published": false
+  },
+  {
+    "slug": "what-are-tokens-in-ai",
+    "question": "what are tokens in ai",
+    "published": false
+  },
+  {
+    "slug": "what-is-prompt-writer",
+    "question": "what is prompt writer",
+    "published": false
+  },
+  {
+    "slug": "what-practices-are-beneficial-for-training-ai-models-with-prompts",
+    "question": "what practices are beneficial for training ai models with prompts",
+    "published": false
+  },
+  {
+    "slug": "how-to-prompt-ai-to-write-like-a-human",
+    "question": "how to prompt ai to write like a human",
+    "published": false
+  },
+  {
+    "slug": "how-to-organize-ai-prompts",
+    "question": "how to organize ai prompts",
+    "published": false
+  },
+  {
+    "slug": "what-are-prompts",
+    "question": "what are prompts",
+    "published": false
+  },
+  {
+    "slug": "what-hasppens-if-you-type-god-in-an-ai-prompt",
+    "question": "what hasppens if you type god in an ai prompt",
+    "published": false
+  },
+  {
+    "slug": "what-is-the-purpose-of-a-prompt",
+    "question": "what is the purpose of a prompt",
+    "published": false
+  },
+  {
+    "slug": "are-fast-api-and-open-ai-api-same",
+    "question": "are fast api and open ai api same",
+    "published": false
+  },
+  {
+    "slug": "what-is-chatgpt-playground",
+    "question": "what is chatgpt playground",
+    "published": false
+  },
+  {
+    "slug": "what-is-injection-attack",
+    "question": "what is injection attack",
+    "published": false
+  },
+  {
+    "slug": "what-is-prompt-injection",
+    "question": "what is prompt injection",
+    "published": false
+  },
+  {
+    "slug": "where-to-place-the-llm-txt-file-for-the-website",
+    "question": "where to place the llm.txt file for the website",
+    "published": false
+  },
+  {
+    "slug": "what-is-the-role-of-llm-txt",
+    "question": "what is the role of llm.txt",
+    "published": false
+  },
+  {
+    "slug": "how-to-get-indexed-by-llm-through-llms-txt-file",
+    "question": "how to get indexed by llm through llms.txt file",
+    "published": false
+  },
+  {
+    "slug": "is-there-a-way-to-check-for-ai-on-powerpoint",
+    "question": "is there a way to check for ai on powerpoint",
+    "published": false
+  },
+  {
+    "slug": "how-accurate-is-grammarly-ai-detector",
+    "question": "how accurate is grammarly ai detector",
+    "published": false
+  },
+  {
+    "slug": "is-ai-plagiarism",
+    "question": "is ai plagiarism",
+    "published": false
+  },
+  {
+    "slug": "can-ai-narrate-a-letter",
+    "question": "can ai narrate a letter",
+    "published": false
+  },
+  {
+    "slug": "what-ai-detector-does-canvas-use",
+    "question": "what ai detector does canvas use",
+    "published": false
+  },
+  {
+    "slug": "how-accurate-is-gptzero",
+    "question": "how accurate is gptzero",
+    "published": false
+  },
+  {
+    "slug": "why-do-ai-detectors-flag-my-writing",
+    "question": "why do ai detectors flag my writing",
+    "published": false
+  },
+  {
+    "slug": "how-to-make-chatgpt-write-like-a-human",
+    "question": "how to make chatgpt write like a human",
+    "published": false
+  },
+  {
+    "slug": "how-to-make-ai-not-sound-like-ai",
+    "question": "how to make ai not sound like ai",
+    "published": false
+  },
+  {
+    "slug": "what-is-few-shot-prompting",
+    "question": "what is few shot prompting",
+    "published": false
+  },
+  {
+    "slug": "what-does-the-stop-sequence-in-few-shot-learning-signify",
+    "question": "what does the stop sequence in few shot learning signify",
+    "published": false
+  },
+  {
+    "slug": "what-is-chain-of-thought-prompting",
+    "question": "what is chain of thought prompting",
+    "published": false
+  },
+  {
+    "slug": "what-is-serp-visibility",
+    "question": "what is serp visibility",
+    "published": false
+  },
+  {
+    "slug": "how-to-find-serp-features-opportunities",
+    "question": "how to find serp features opportunities",
+    "published": false
+  },
+  {
+    "slug": "what-is-a-serp",
+    "question": "what is a serp",
+    "published": false
+  },
+  {
+    "slug": "how-to-find-serp-features-opportunities-2",
+    "question": "how to find serp features opportunities",
+    "published": false
+  },
+  {
+    "slug": "how-to-create-a-url-for-an-email-campaign",
+    "question": "how to create a url for an email campaign",
+    "published": false
+  },
+  {
+    "slug": "how-do-i-find-utm-source-in-ga4",
+    "question": "how do i find utm source in ga4",
+    "published": false
+  },
+  {
+    "slug": "what-are-utms",
+    "question": "what are utms",
+    "published": false
+  },
+  {
+    "slug": "how-to-use-meta-keywords-for-seo",
+    "question": "how to use meta keywords for seo",
+    "published": false
+  },
+  {
+    "slug": "how-to-add-meta-keywords-in-wordpress-without-plugin",
+    "question": "how to add meta keywords in wordpress without plugin",
+    "published": false
+  },
+  {
+    "slug": "should-i-use-meta-keywords",
+    "question": "should i use meta keywords",
+    "published": false
+  },
+  {
+    "slug": "do-meta-keywords-matter",
+    "question": "do meta keywords matter",
+    "published": false
+  },
+  {
+    "slug": "what-is-a-meta-title",
+    "question": "what is a meta title",
+    "published": false
+  },
+  {
+    "slug": "how-many-keywords-should-i-use-in-meta-tag",
+    "question": "how many keywords should i use in meta tag",
+    "published": false
+  },
+  {
+    "slug": "how-crawl-budget-prioritizes-multiple-sitemaps-in-robots-txt",
+    "question": "how crawl budget prioritizes multiple sitemaps in robots.txt",
+    "published": false
+  },
+  {
+    "slug": "how-to-remove-robots-txt-file-from-website-shopify",
+    "question": "how to remove robots txt file from website shopify",
+    "published": false
+  },
+  {
+    "slug": "what-is-open-graph",
+    "question": "what is open graph",
+    "published": false
+  },
+  {
+    "slug": "what-is-keyword-density",
+    "question": "what is keyword density",
+    "published": false
+  },
+  {
+    "slug": "how-to-see-what-keywords-a-website-is-using",
+    "question": "how to see what keywords a website is using",
+    "published": false
+  },
+  {
+    "slug": "does-keyword-density-matter-anymore",
+    "question": "does keyword density matter anymore",
+    "published": false
+  },
+  {
+    "slug": "how-to-increase-readability-score",
+    "question": "how to increase readability score",
+    "published": false
+  },
+  {
+    "slug": "what-is-hreflang",
+    "question": "what is hreflang",
+    "published": false
+  },
+  {
+    "slug": "how-to-fix-hreflang-tags-with-errors",
+    "question": "how to fix hreflang tags with errors",
+    "published": false
+  },
+  {
+    "slug": "what-does-lorem-ipsum-mean",
+    "question": "what does lorem ipsum mean",
+    "published": false
+  },
+  {
+    "slug": "what-is-clamp-in-css",
+    "question": "what is clamp in css",
+    "published": false
+  },
+  {
+    "slug": "what-is-fluid-typography",
+    "question": "what is fluid typography",
+    "published": false
+  },
+  {
+    "slug": "how-to-check-if-colors-are-ada-compliant",
+    "question": "how to check if colors are ada compliant",
+    "published": false
+  },
+  {
+    "slug": "what-colors-are-ada-compliant",
+    "question": "what colors are ada compliant",
+    "published": false
+  },
+  {
+    "slug": "what-is-a-favicon",
+    "question": "what is a favicon",
+    "published": false
+  },
+  {
+    "slug": "how-to-make-an-ico-file",
+    "question": "how to make an ico file",
+    "published": false
+  },
+  {
+    "slug": "how-to-change-favicon-on-squarespace",
+    "question": "how to change favicon on squarespace",
+    "published": false
+  },
+  {
+    "slug": "what-is-a-md-file",
+    "question": "what is a .md file",
+    "published": false
+  },
+  {
+    "slug": "how-to-import-markdown-format-to-excel",
+    "question": "how to import markdown format to excel",
+    "published": false
+  },
+  {
+    "slug": "do-ai-crawlers-like-gptbot-support-content-negotiation-for-markdown",
+    "question": "do ai crawlers like gptbot support content negotiation for markdown",
+    "published": false
+  },
+  {
+    "slug": "does-ai-know-that-i-am-using-markdown",
+    "question": "does ai know that i am using markdown",
+    "published": false
+  },
+  {
+    "slug": "what-does-markdown-editor-mean",
+    "question": "what does markdown editor mean",
+    "published": false
+  },
+  {
+    "slug": "how-to-underline-in-markdown",
+    "question": "how to underline in markdown",
+    "published": false
+  }
+]

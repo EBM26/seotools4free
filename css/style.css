@@ -331,6 +331,59 @@ main {
   max-width: 56ch;
 }
 
+/* ---------- FAQ pages (plain content layout, no .tool-card framing) ---------- */
+
+.faq-back-link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.faq-back-link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.faq-body p {
+  max-width: 68ch;
+  margin: 0 0 20px;
+}
+
+.faq-body p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-nav {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.faq-nav a {
+  max-width: 45%;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.faq-nav a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.faq-nav__next {
+  margin-left: auto;
+  text-align: right;
+}
+
 .tool-card {
   position: relative;
   background: var(--color-surface);

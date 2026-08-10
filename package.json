@@ -1,0 +1,22 @@
+{
+  "name": "seotools4free",
+  "version": "1.0.0",
+  "description": "A collection of free, no-signup SEO and developer utility tools. Each tool is its own static HTML page (no SPA framework) so every tool is independently indexable/SEO-friendly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EBM26/seotools4free.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EBM26/seotools4free/issues"
+  },
+  "homepage": "https://github.com/EBM26/seotools4free#readme",
+  "devDependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

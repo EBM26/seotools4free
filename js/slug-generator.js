@@ -14,22 +14,6 @@
     }, 2500);
   }
 
-  function slugify(text, separator, lowercase) {
-    var result = text.trim();
-    if (lowercase) result = result.toLowerCase();
-
-    // Normalize accented characters (e.g. café -> cafe)
-    result = result.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-    // Replace anything that isn't a letter, number, or existing separator with a space
-    result = result.replace(/[^a-zA-Z0-9\-_\s]/g, ' ');
-
-    // Collapse whitespace and existing separators into the chosen separator
-    result = result.trim().replace(/[\s\-_]+/g, separator);
-
-    return result;
-  }
-
   function update() {
     var text = textInput.value;
     var separator = separatorSelect.value;

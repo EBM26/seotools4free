@@ -390,6 +390,32 @@ Generator were added outside the catalog entirely, so catalog items
    from other tools' scripts.
 4. Add the tool to `index.html`'s tool list and to this README.
 
+## FAQ pages
+
+The site also has a growing set of standalone FAQ content pages, generated
+from a source spreadsheet rather than hand-written:
+
+- **Source of truth**: `seotoolsFAQMaster.xlsx` (repo root), with `Question`
+  and `Answer` columns. `faq-data/progress.json` tracks which rows have been
+  published (`{ slug, question, published }`, one entry per spreadsheet row,
+  in spreadsheet order).
+- **Generator**: `faq-data/generate-faqs.js` (Node script, `xlsx` npm package
+  as a dev-only dependency — not shipped to the site itself) reads the
+  spreadsheet, slugifies new questions using the shared `js/slugify.js`
+  logic (the same function the Slug Generator tool uses), and renders pages
+  from `faq-data/faq-template.html`.
+- **Output**: each FAQ lives at `faq/{slug}.html` on disk, linked
+  extensionless as `/faq/{slug}`, with a "previous"/"next" row linking
+  neighboring questions in spreadsheet order. `faqs.html` (`/faqs`) lists
+  every published FAQ, same order.
+- FAQ pages use a plain content layout (`.faq-back-link`, `.faq-body`,
+  `.faq-nav`), not the tool pages' `.tool-card` corner-bracket styling.
+- **To publish more**: append new rows to the spreadsheet, then ask Claude
+  Code to "add 10 more FAQs" (or run
+  `node faq-data/generate-faqs.js <count>` directly). Already-published
+  pages are never rewritten except that the previously-last page gets its
+  "next" arrow filled in once the following batch goes live.
+
 ## Open decisions
 
 - Site name not finalized. Considering either a brandable name (e.g.
