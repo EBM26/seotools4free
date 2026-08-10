@@ -44,7 +44,7 @@
   --color-border-strong: var(--neutral-500);
   --color-text: #000000;
   --color-heading: var(--blue-900);
-  --color-text-muted: var(--neutral-800);
+  --color-text-muted: #000000;
   --color-accent: var(--blue-700);
   --color-accent-hover: var(--blue-800);
   --color-accent-soft: var(--blue-100);
@@ -95,6 +95,10 @@ body {
 
 a {
   color: var(--color-accent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
 }
 
 h3 {
@@ -337,7 +341,6 @@ main {
   line-height: normal;
   letter-spacing: -0.01em;
   margin: 0 0 8px;
-  color: var(--color-heading);
 }
 
 .tool-description {
@@ -860,14 +863,12 @@ main {
   font-weight: 600;
   font-size: 1.3rem;
   margin: 0 0 14px;
-  color: var(--color-heading);
 }
 
 .tool-explainer h3 {
   font-family: var(--font-display);
   font-weight: 600;
   margin: 18px 0 6px;
-  color: var(--color-heading);
 }
 
 .tool-explainer p {
@@ -1131,7 +1132,6 @@ main {
   font-weight: 600;
   font-size: 1.5rem;
   margin: 0 0 12px;
-  color: var(--color-heading);
 }
 
 .llms-preview blockquote {
@@ -1153,7 +1153,6 @@ main {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 20px 0 8px;
-  color: var(--color-heading);
 }
 
 .llms-preview ul {

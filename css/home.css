@@ -31,7 +31,6 @@ body.home {
   font-size: clamp(38px, 5.4vw, 62px);
   line-height: 1.04;
   letter-spacing: -0.015em;
-  color: var(--color-heading);
   margin: 0 0 22px;
   max-width: 16ch;
   text-wrap: balance;
@@ -167,7 +166,6 @@ body.home {
   font-weight: 500;
   font-size: 26px;
   margin: 0;
-  color: var(--color-heading);
 }
 
 .home-grid {
@@ -249,7 +247,6 @@ body.home {
 .home-empty__title {
   font-family: var(--font-display);
   font-size: 24px;
-  color: var(--color-heading);
   margin-bottom: 8px;
 }
 
