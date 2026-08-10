@@ -215,6 +215,7 @@ body.home {
   font-weight: 600;
   font-size: 17px;
   line-height: 1.25;
+  color: var(--pine-600);
 }
 
 .home-card__desc {
