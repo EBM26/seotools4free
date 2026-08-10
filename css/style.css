@@ -70,7 +70,7 @@
   --shadow-card: 0 0 0 1px rgba(10, 9, 11, 0.05), 0 2px 2px -1px rgba(10, 9, 11, 0.04), 0 2px 12px -1px rgba(10, 9, 11, 0.10);
 
   --font-display: Verdana, Geneva, sans-serif;
-  --font-body: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: Calibri, Candara, Segoe, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 

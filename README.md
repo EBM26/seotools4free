@@ -20,7 +20,7 @@ indexable/SEO-friendly.
 
 - **Aesthetic:** instrument-panel / precision. Off-white background, one
   accent color (teal-green, `#1F6F5C`), corner-bracket framing on tool cards.
-- **Typography:** Verdana (`--font-display`) for headings, Open Sans
+- **Typography:** Verdana (`--font-display`) for headings, Calibri
   (`--font-body`) for body text. Monospace (JetBrains Mono) for every
   number/output the tools produce — this is the core visual rule: what
   you *type* is body text, what the tool *outputs* is monospace.
