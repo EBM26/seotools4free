@@ -20,10 +20,10 @@ indexable/SEO-friendly.
 
 - **Aesthetic:** instrument-panel / precision. Off-white background, one
   accent color (teal-green, `#1F6F5C`), corner-bracket framing on tool cards.
-- **Typography:** sans-serif (General Sans / Inter) for headings and body
-  text. Monospace (JetBrains Mono) for every number/output the tools
-  produce — this is the core visual rule: what you *type* is sans-serif,
-  what the tool *outputs* is monospace.
+- **Typography:** Verdana (`--font-display`) for headings, Open Sans
+  (`--font-body`) for body text. Monospace (JetBrains Mono) for every
+  number/output the tools produce — this is the core visual rule: what
+  you *type* is body text, what the tool *outputs* is monospace.
 - **Layout:** desktop max content width is `1080px` (single CSS variable
   `--max-width` in `css/style.css`, controls header/main/footer).
 - **Header:** solid accent-colored background, white logo/nav text.
