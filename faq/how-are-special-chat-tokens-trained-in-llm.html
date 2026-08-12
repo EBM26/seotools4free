@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>how are special chat tokens trained in llm</title>
+  <meta name="description" content="Special chat tokens in large language models are trained by including them as explicit markers within the training data during the fine-tuning process," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="canonical" href="https://seotools4free.com/faq/how-are-special-chat-tokens-trained-in-llm" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <a href="/faqs" class="faq-back-link">&larr; Back to all FAQs</a>
+
+    <div class="tool-eyebrow">FAQ</div>
+    <h1 class="tool-title">how are special chat tokens trained in llm</h1>
+
+    <div class="faq-body">
+      <p>Special chat tokens in large language models are trained by including them as explicit markers within the training data during the fine-tuning process, particularly during instruction tuning and reinforcement learning stages. These special tokens, like ones that signal the start of a user message, the start of an assistant response, or the end of a conversation turn, aren't natural language at all, they're artificial markers the model learns to recognize and generate at the right moments. During training, developers structure conversation examples using a consistent template where these tokens wrap around different parts of the dialogue, teaching the model to associate certain tokens with certain roles, like distinguishing between what the user said and what the assistant should say next. The model learns through repeated exposure across millions of formatted examples to predict when these tokens should appear and what should follow them. This is different from how the model learns regular vocabulary, since special tokens are typically added to the tokenizer's vocabulary intentionally and given unique, reserved token IDs so they never get confused with regular words or subword pieces. This structured training is what allows chat models to maintain coherent conversational turns.</p>
+    </div>
+
+    <div class="faq-nav">
+      <a href="/faq/what-is-a-token-in-chatgpt" class="faq-nav__prev">&larr; what is a token in chatgpt</a>
+      <a href="/faq/what-are-tokens-in-ai" class="faq-nav__next">what are tokens in ai &rarr;</a>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>
