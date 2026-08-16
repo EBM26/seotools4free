@@ -22,7 +22,7 @@
     <a href="/faqs" class="faq-back-link">&larr; Back to all FAQs</a>
 
     <div class="tool-eyebrow">FAQ</div>
-    <h1 class="tool-title">how are special chat tokens trained in llm</h1>
+    <h1 class="tool-title">how are special chat tokens trained in llm?</h1>
 
     <div class="faq-body">
       <p>Special chat tokens in large language models are trained by including them as explicit markers within the training data during the fine-tuning process, particularly during instruction tuning and reinforcement learning stages. These special tokens, like ones that signal the start of a user message, the start of an assistant response, or the end of a conversation turn, aren't natural language at all, they're artificial markers the model learns to recognize and generate at the right moments. During training, developers structure conversation examples using a consistent template where these tokens wrap around different parts of the dialogue, teaching the model to associate certain tokens with certain roles, like distinguishing between what the user said and what the assistant should say next. The model learns through repeated exposure across millions of formatted examples to predict when these tokens should appear and what should follow them. This is different from how the model learns regular vocabulary, since special tokens are typically added to the tokenizer's vocabulary intentionally and given unique, reserved token IDs so they never get confused with regular words or subword pieces. This structured training is what allows chat models to maintain coherent conversational turns.</p>
