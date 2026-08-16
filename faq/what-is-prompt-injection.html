@@ -22,7 +22,7 @@
     <a href="/faqs" class="faq-back-link">&larr; Back to all FAQs</a>
 
     <div class="tool-eyebrow">FAQ</div>
-    <h1 class="tool-title">what is prompt injection?</h1>
+    <h1 class="tool-title">What is prompt injection?</h1>
 
     <div class="faq-body">
       <p>Prompt injection is a security vulnerability specific to AI language models where an attacker crafts input designed to override or manipulate the model's original instructions. It's conceptually similar to older injection attacks like SQL injection, but instead of targeting a database, it targets the natural language instructions that guide an AI system's behavior. A common example involves a chatbot with hidden instructions telling it to stay on topic, where a user then types something like 'ignore all previous instructions,' attempting to get the model to bypass its guardrails. Prompt injection can also happen indirectly, where malicious instructions are hidden inside a webpage, document, or email that an AI system reads and processes, causing it to act on attacker-controlled content without the user realizing it. This is a growing concern as AI systems get more autonomy, like browsing the web or taking actions on a user's behalf, because a successful injection could cause the AI to leak sensitive data or perform unintended actions. Defenses are still evolving but include stricter input sanitization, separating trusted instructions from untrusted content, and limiting what actions a model can take without human confirmation.</p>

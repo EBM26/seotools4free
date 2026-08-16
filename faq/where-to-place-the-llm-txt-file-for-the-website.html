@@ -22,7 +22,7 @@
     <a href="/faqs" class="faq-back-link">&larr; Back to all FAQs</a>
 
     <div class="tool-eyebrow">FAQ</div>
-    <h1 class="tool-title">where to place the llm.txt file for the website?</h1>
+    <h1 class="tool-title">Where to place the llm.txt file for the website?</h1>
 
     <div class="faq-body">
       <p>The llms.txt file should be placed in the root directory of your website, the same location where you'd put robots.txt or sitemap.xml, so it's accessible at yourdomain.com/llms.txt. This is a required convention, not a stylistic choice, because AI crawlers and language model tools are designed to look for the file at that exact root-level path. Placing it in a subdirectory or nesting it inside another folder means most systems looking for it simply won't find it. The file itself is a plain text Markdown document that summarizes your site's content and purpose in a format intended to be easy for AI systems to parse, essentially acting as a curated guide to your most important pages. If you're using a static site generator or CMS, confirm that your deployment process actually publishes the file to the root of the live domain rather than leaving it in a source folder that never gets deployed. Once it's live, you can verify placement simply by visiting the URL directly in a browser to confirm the file loads.</p>
