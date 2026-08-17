@@ -67,6 +67,12 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+function displayQuestion(question) {
+  let s = question.trim();
+  if (!/[?!.]$/.test(s)) s = s + '?';
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
 function truncateAtWordBoundary(text, maxLen) {
   if (text.length <= maxLen) return text;
   const lastSpace = text.slice(0, maxLen).lastIndexOf(' ');
@@ -160,7 +166,7 @@ function faqsIndexItem(entry, index, answerPreview) {
     '      <a href="/faq/' + entry.slug + '" class="tool-list__item">\n' +
     '        <span class="tool-list__index">' + index + '</span>\n' +
     '        <div>\n' +
-    '          <div class="tool-list__name">' + escapeHtml(entry.question) + '</div>\n' +
+    '          <div class="tool-list__name">' + escapeHtml(displayQuestion(entry.question)) + '</div>\n' +
     '          <div class="tool-list__desc">' + escapeHtml(answerPreview) + '</div>\n' +
     '        </div>\n' +
     '      </a>'
@@ -225,7 +231,7 @@ function main() {
       .replace(/{{TITLE}}/g, escapeHtml(entry.question))
       .replace(/{{META_DESCRIPTION}}/g, escapeHtml(truncateAtWordBoundary(entry.answer, 155)))
       .replace(/{{SLUG}}/g, entry.slug)
-      .replace(/{{QUESTION}}/g, escapeHtml(entry.question))
+      .replace(/{{QUESTION}}/g, escapeHtml(displayQuestion(entry.question)))
       .replace(/{{BODY_PARAGRAPHS}}/g, paragraphsHtml(entry.answer))
       .replace(/{{PREV_LINK}}/g, prevLink)
       .replace(/{{NEXT_LINK}}/g, nextLink);
@@ -246,7 +252,7 @@ function main() {
       const nextLink =
         '      <a href="/faq/' + allEntries[firstBatchIndex].slug + '" class="faq-nav__next">' +
         escapeHtml(firstNewEntry.question) + ' &rarr;</a>\n';
-      priorHtml = priorHtml.replace('    </div>\n  </main>', '    ' + nextLink + '</div>\n  </main>');
+      priorHtml = priorHtml.replace('    </div>\n  </main>', nextLink + '    </div>\n  </main>');
       fs.writeFileSync(priorPagePath, priorHtml);
     }
   }
