@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Hashtag Extractor — Free Hashtag Counter & Limit Checker</title>
+  <meta name="description" content="Paste your YouTube title or description to extract every hashtag, see which 3 show above your video title, and check if you've gone over YouTube's 15-hashtag limit. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="canonical" href="https://seotools4free.com/youtube-hashtag-extractor" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">SEO</div>
+    <h1 class="tool-title">YouTube Hashtag Extractor</h1>
+    <p class="tool-description">Paste your video title or description below to pull out every hashtag, see which 3 will show above your title, and check whether you've gone past YouTube's real hashtag limit, updated live as you type.</p>
+
+    <div class="tool-card">
+      <label for="input-text">Video title / description</label>
+      <textarea id="input-text" rows="10" placeholder="paste your video description here"></textarea>
+
+      <div class="tool-output">
+        <div class="stat" style="flex: 1 1 100%;">
+          <div class="stat__value" id="stat-count">0</div>
+          <div class="stat__label">Hashtags found</div>
+        </div>
+      </div>
+
+      <div class="serp-warning" id="limit-warning">
+        <strong><span id="warning-count">0</span> hashtags found</strong> — YouTube only recognizes the first 15 hashtags in a description. The <span id="warning-extra">0</span> highlighted in amber below won't be recognized at all.
+      </div>
+
+      <div style="margin-top: 22px;">
+        <label>These 3 will show above your title</label>
+        <div class="hashtag-first3" id="first-three-box">
+          <div class="hashtag-empty" id="first-three-empty">No hashtags yet.</div>
+          <div class="tag-chip-list" id="first-three-list"></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 22px;">
+        <label>All extracted hashtags</label>
+        <div class="tag-chip-list" id="all-hashtags-list">
+          <div class="hashtag-empty" id="all-hashtags-empty">Paste text above to see extracted hashtags.</div>
+        </div>
+      </div>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy all hashtags</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>Hashtags in a YouTube description work like lightweight topic tags: a viewer can tap one to browse other videos using the same tag, and they give YouTube a small extra signal about what your video covers. This tool reads back exactly what you've written so you can check your hashtags before you publish, not after.</p>
+      <h3>Why the first 3 matter most</h3>
+      <p>YouTube pulls the first 3 hashtags out of your description and displays them directly above your video title, both in search results and on the watch page. That's prime, already-visible real estate, so it's worth being deliberate about which 3 hashtags lead your description rather than letting them fall wherever they happen to land in the text.</p>
+      <h3>The 15-hashtag limit</h3>
+      <p>YouTube stops reading hashtags after the 15th one in a description entirely, anything past that point is silently ignored, not just hidden. If you've packed a description with 20 hashtags hoping for extra reach, the last 5 are doing nothing at all. This tool flags exactly which ones fall outside that limit so you can trim or reorder before you publish.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/youtube-hashtag-extractor.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Tag Generator — Free Video Tag List Creator</title>
+  <meta name="description" content="Generate a comma-separated YouTube video tag list from any topic, with a live check against YouTube's 500-character tag limit. Free, instant, no signup required." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="canonical" href="https://seotools4free.com/youtube-tag-generator" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="tool-eyebrow">SEO</div>
+    <h1 class="tool-title">YouTube Tag Generator</h1>
+    <p class="tool-description">Type a topic below to generate a comma-separated tag list for YouTube's video tags field, updated live as you type, with a running check against YouTube's 500-character tag limit.</p>
+
+    <div class="tool-card">
+      <label for="input-topic">Main topic *</label>
+      <input type="text" id="input-topic" placeholder="e.g. sourdough bread" />
+
+      <div style="margin-top: 20px;">
+        <label for="input-keywords">Secondary keywords (optional, comma-separated)</label>
+        <input type="text" id="input-keywords" placeholder="e.g. beginner, no knead" />
+      </div>
+
+      <div style="margin-top: 22px;">
+        <label>Generated tags <span class="serp-charcount" id="tag-count-label"></span></label>
+        <div class="tag-chip-list" id="tag-list">
+          <div class="hashtag-empty">Enter a topic above to generate tags.</div>
+        </div>
+      </div>
+
+      <div class="serp-warning" id="char-warning">
+        You're over YouTube's 500-character tag limit, everything past that point gets silently dropped when pasted into the tags field. Remove or shorten a few tags above to get back under it.
+      </div>
+
+      <div style="margin-top: 22px;">
+        <label for="output-tags">Comma-separated tag string <span class="serp-charcount" id="char-count-wrap"><span id="char-count">0</span> / 500 characters</span></label>
+        <textarea id="output-tags" readonly rows="6" style="font-family: var(--font-mono); font-size: 1rem; background: var(--color-bg);">Enter a topic above to generate your tag list.</textarea>
+      </div>
+
+      <div class="serp-actions">
+        <button type="button" class="btn" id="btn-copy">Copy tags</button>
+        <button type="button" class="btn btn--secondary" id="btn-reset">Reset</button>
+      </div>
+      <div class="serp-actions__feedback" id="actions-feedback"></div>
+    </div>
+
+    <div class="tool-card tool-explainer">
+      <h2>About this tool</h2>
+      <p>YouTube's tag field lets you attach a set of keywords to a video that viewers never see, only YouTube's own systems read them. Tags are a minor, legacy-era ranking signal at this point, your title, description, and thumbnail do far more of the work in whether a video gets recommended or turned up in search, but filling tags in with relevant variations still costs nothing and can help YouTube place an ambiguous topic in the right context, so it's worth the two minutes.</p>
+      <h3>How the tags are generated</h3>
+      <p>Type a topic and this tool combines it against a bank of common modifiers (tutorial, guide, tips, for beginners, best, 2026, and more) to produce a broad set of natural-sounding variations. Add optional secondary keywords and it also pairs those directly with your topic, since real search phrasing often combines two ideas rather than one. Nothing here is pulled from YouTube's search or autocomplete data, it's template-based, so treat the result as a starting list to edit down, not a keyword-research result.</p>
+      <h3>The 500-character limit</h3>
+      <p>YouTube's tag field has a hard 500-character cap, counting every tag plus the commas and spaces between them. Paste in more than that and the excess gets silently cut off rather than rejected with a warning, so you could think you've added a helpful tag that YouTube never actually saved. The character count above switches to a warning color as you approach and pass that limit, remove tags with the × on each chip until you're back under it.</p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/include.js"></script>
+  <script src="js/youtube-tag-generator.js"></script>
+</body>
+</html>

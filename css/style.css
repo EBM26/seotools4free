@@ -1342,6 +1342,66 @@ main {
   background: rgba(181, 137, 0, 0.08);
 }
 
+.tag-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 10px 6px 14px;
+}
+
+.tag-chip--over-limit {
+  background: rgba(181, 137, 0, 0.12);
+  color: #7a5b12;
+  border-color: var(--color-warn);
+}
+
+.tag-chip__remove {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tag-chip__remove:hover {
+  opacity: 0.6;
+}
+
+.hashtag-empty {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.hashtag-first3 {
+  background: var(--color-accent-soft);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-top: 10px;
+}
+
+.serp-charcount.is-near-limit,
+.serp-charcount.is-over-limit {
+  color: var(--color-warn);
+  font-weight: 700;
+}
+
 .report-item__title {
   font-family: var(--font-display);
   font-weight: 600;

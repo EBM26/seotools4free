@@ -380,6 +380,24 @@ Generator were added outside the catalog entirely, so catalog items
     prompting is and why it helps on multi-step/judgment-heavy tasks, plus
     a note that the added output length means added cost/latency, so it's
     best reserved for genuinely hard tasks rather than simple lookups.
+33. YouTube Hashtag Extractor — done, see
+    `youtube-hashtag-extractor.html` (site item 30). Paste a video
+    title/description and it live-extracts every `#hashtag` (deduped
+    case-insensitively, first-occurrence casing/order kept). Highlights
+    the first 3 separately since those are the ones YouTube displays
+    above the video title, and warns (with the 16th-and-up tags
+    visually marked) once a description passes YouTube's real 15-hashtag
+    cap, since anything past that is silently ignored. Copy-all
+    (space-separated), reset.
+34. YouTube Tag Generator — done, see `youtube-tag-generator.html`
+    (site item 31). Combines a typed topic against a modifier-template
+    bank (tutorial, guide, for beginners, best, 2026, etc.) plus optional
+    secondary-keyword pairwise combinations into a deduped tag list,
+    removable per-tag via an "×" on each chip. Purely template-based, not
+    pulled from any real YouTube data (the explainer says so directly).
+    Live character count against YouTube's real 500-character tag-field
+    cap, switching to the warning color as it's approached/exceeded,
+    since tags past that limit get silently dropped. Copy, reset.
 
 ## Adding a new tool
 
