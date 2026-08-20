@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>how to add meta keywords in wordpress without plugin</title>
+  <meta name="description" content="You can add meta keywords in WordPress without a plugin by directly editing your theme's header.php file, though it's worth remembering upfront that this" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="canonical" href="https://seotools4free.com/faq/how-to-add-meta-keywords-in-wordpress-without-plugin" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <a href="/faqs" class="faq-back-link">&larr; Back to all FAQs</a>
+
+    <div class="tool-eyebrow">FAQ</div>
+    <h1 class="tool-title">How to add meta keywords in wordpress without plugin?</h1>
+
+    <div class="faq-body">
+      <p>You can add meta keywords in WordPress without a plugin by directly editing your theme's header.php file, though it's worth remembering upfront that this tag has essentially zero impact on modern SEO since Google and other major search engines stopped using it for ranking purposes years ago. If you still want to add it, perhaps for internal purposes or a specific legacy reason, you'd access your theme files through the WordPress admin dashboard under Appearance, then Theme File Editor, or alternatively through FTP for a safer editing experience, and locate the header.php file. Within the head section of that file, you'd manually insert a meta tag formatted with the name attribute set to keywords and the content attribute containing your comma-separated list of relevant terms. Since this would apply the same static keywords across every page site-wide, which isn't very useful, you'd need to use conditional PHP logic checking the current page or post to dynamically pull in page-specific keywords, perhaps from a custom field you create for each post. Given the technical effort involved for a tag that provides no actual SEO benefit, most experienced developers recommend skipping this entirely and focusing your time on meta titles and descriptions instead, which genuinely do matter.</p>
+    </div>
+
+    <div class="faq-nav">
+      <a href="/faq/how-to-use-meta-keywords-for-seo" class="faq-nav__prev">&larr; how to use meta keywords for seo</a>
+      <a href="/faq/should-i-use-meta-keywords" class="faq-nav__next">should i use meta keywords &rarr;</a>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>
