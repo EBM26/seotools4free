@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>what is clamp in css</title>
+  <meta name="description" content="Clamp is a CSS function that allows you to set a value, most commonly for font size, width, or spacing, that dynamically adjusts between a defined minimum" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="canonical" href="https://seotools4free.com/faq/what-is-clamp-in-css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <a href="/faqs" class="faq-back-link">&larr; Back to all FAQs</a>
+
+    <div class="tool-eyebrow">FAQ</div>
+    <h1 class="tool-title">What is clamp in css?</h1>
+
+    <div class="faq-body">
+      <p>Clamp is a CSS function that allows you to set a value, most commonly for font size, width, or spacing, that dynamically adjusts between a defined minimum and maximum based on the current viewport size, without needing multiple separate media queries to achieve responsive behavior. The clamp function takes three parameters written in a specific order, a minimum value, a preferred or ideal value usually expressed using a flexible unit like viewport width, and a maximum value, formatted like clamp(minimum, preferred, maximum). For example, you might write font-size: clamp(1rem, 2vw, 2rem), which tells the browser to use 2vw as the font size whenever possible, but never let it shrink smaller than 1rem or grow larger than 2rem, regardless of how small or large the browser window gets. This has become an incredibly popular tool for creating fluid, responsive typography and layouts because it eliminates the need for numerous breakpoint-specific media queries that were traditionally required to adjust font sizes at different screen widths. Clamp is well supported across all modern browsers and represents a significant simplification in how developers approach responsive design, since a single line of CSS can now handle scaling that previously required much more code.</p>
+    </div>
+
+    <div class="faq-nav">
+      <a href="/faq/what-does-lorem-ipsum-mean" class="faq-nav__prev">&larr; what does lorem ipsum mean</a>
+      <a href="/faq/what-is-fluid-typography" class="faq-nav__next">what is fluid typography &rarr;</a>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/include.js"></script>
+</body>
+</html>
